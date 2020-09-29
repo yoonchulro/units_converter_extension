@@ -50,6 +50,19 @@ Include details about your configuration and environment:
 
 * **What's the name and version of the OS you're using**?
 
+## Git Remote Workflow
+When adding a new feature to the project, work should be completed in a branch separate from the main repository, with a name that roughly indicates what its purpose is.
+To create a new branch on your local machine, run:  
+
+`git checkout -b <branch_name>`
+
+You can then make changes in your branch. When you are ready to add this branch to the remote, run:  
+
+`git push -u origin <branch_name>`
+
+You will only need to run this command the first time you want to commit your local changes to the remote branch.
+After the first commit, a simple `git push` from your repository root will push committed changes to the remote repository.
+
 ### Pull Requests
 
 The process described here has several goals:
