@@ -1,11 +1,11 @@
-# Testing with Jest.js
+# Testing with Mocha and Chai
 ## Prerequisites
 - node.js  
-- yarn  
+- npm  
 ## Setup
 From the repository root, run:  
-`$ yarn add --dev jest`
+`$ npm install --save-dev mocha chai`
 ## Running tests
 From the repository root, run:  
-`$ yarn test`  
-yarn will then attempt to run all test files that end with "**.test.js**"
+`$ npm test`  
+npm will then attempt to run all test files that end with "**.test.js**"

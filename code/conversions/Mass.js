@@ -72,3 +72,4 @@ class Mass {
 
 
 }
+module.exports = Mass;
