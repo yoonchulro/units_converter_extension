@@ -52,3 +52,4 @@ class Time {
 		return res;
 	}
 }
+module.exports = Time;

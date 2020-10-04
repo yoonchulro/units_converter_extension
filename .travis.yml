@@ -1,5 +1,9 @@
+language: node_js
+node_js:
+  - 12.18.3
+
 addons:
   chrome: stable
 
 script:
-  - echo "Add script to pack chrome extension"
+  - npm test
