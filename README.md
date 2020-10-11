@@ -14,16 +14,16 @@ Click on the image below to preview the working of the extension<br/>
 
 ## Installation 
 
-- Clone the repository using ```git clone https://github.com/bhavesh242/units_converter_extension```
+- Clone the repository using ```git clone https://github.com/se20z09/units_converter_extension```
 - In the chrome browser open ```chrome://extensions/```
 - Enable developer settings if it is not enabled
 - Choose Load Unpacked
 - Select the repository folder that was cloned in the first step
-![image](https://github.com/bhavesh242/units_converter_extension/blob/master/assets/Images/load%20unpacked.PNG)
+![image](https://github.com/se20z09/units_converter_extension/blob/master/assets/Images/load%20unpacked.PNG)
 - The extension will now be added to the Chrome
-![image](https://github.com/bhavesh242/units_converter_extension/blob/master/assets/Images/Uploaded.PNG)
+![image](https://github.com/se20z09/units_converter_extension/blob/master/assets/Images/Uploaded.PNG)
 - Screenshot of working of the extension
-![image](https://github.com/bhavesh242/units_converter_extension/blob/master/assets/Images/Example.PNG)
+![image](https://github.com/se20z09/units_converter_extension/blob/master/assets/Images/Example.PNG)
 
 ## Languages
 - JavaScript
