@@ -2,7 +2,7 @@
 
 :+1::tada: First off, thanks for taking the time to contribute! :tada::+1:
 
-The following is a set of guidelines for contributing to Smart Units Converter, which are hosted in the [Smart Units Converter](https://github.com/bhavesh242/units_converter_extension) on GitHub. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
+The following is a set of guidelines for contributing to Smart Units Converter, which are hosted in the [Smart Units Converter](https://github.com/se20z09/units_converter_extension) on GitHub. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
 
 #### Table Of Contents
 
@@ -19,7 +19,7 @@ The following is a set of guidelines for contributing to Smart Units Converter, 
 
 ## Code of Conduct
 
-This project and everyone participating in it is governed by the [Smart Units Converter](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [durgamummadi71@gmail.com](mailto:durgamummadi71@gmail.com).
+This project and everyone participating in it is governed by the [code of conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [bjdemick@ncsu.edu](mailto:bjdemick@ncsu.edu).
 
 ## What should I know before I get started?
 This is a test repository, but feel free to file an issue if you still need to.
@@ -90,7 +90,7 @@ While the prerequisites above must be satisfied prior to having your pull reques
 * When only changing documentation, include `[ci skip]` in the commit title
    
  ## Attribution
- * This Contribution instructions were adapted from [Atom's Contributing.md](https://github.com/atom/atom/blob/master/CONTRIBUTING.md)
+ * These contribution instructions were adapted from [Atom's Contributing.md](https://github.com/atom/atom/blob/master/CONTRIBUTING.md)
 
 
 ## Code Style Checker and Analyzer
