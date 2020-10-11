@@ -3,9 +3,9 @@
 An extension that converts your selected values into popular units. Saves time, Makes life easier:dancer:
 
 ![MIT license](https://img.shields.io/badge/License-MIT-green.svg)
-[![GitHub issues](https://img.shields.io/github/issues/bhavesh242/units_converter_extension)](https://github.com/bhavesh242/units_converter_extension)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/bhavesh242/units_converter_extension)
-![GitHub contributors](https://img.shields.io/github/contributors/bhavesh242/units_converter_extension)
+[![GitHub issues](https://img.shields.io/github/issues/se20z09/units_converter_extension)](https://github.com/bhavesh242/units_converter_extension)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/se20z09/units_converter_extension)
+![GitHub contributors](https://img.shields.io/github/contributors/se20z09/units_converter_extension)
 [![DOI](https://zenodo.org/badge/294249129.svg)](https://zenodo.org/badge/latestdoi/294249129)
 [![Build Status](https://travis-ci.com/se20z09/units_converter_extension.svg?branch=master)](https://travis-ci.com/se20z09/units_converter_extension)
 
