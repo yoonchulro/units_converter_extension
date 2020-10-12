@@ -110,8 +110,8 @@ While the prerequisites above must be satisfied prior to having your pull reques
  ## Documentation
  ### JSDoc
  <b>Installation</b>
- - `npm init -y` To create a package.json
- - `npm i -D jsdoc` Installs as a dev dependency JSDoc'
+ - `npm init -y` to create/update a package.json file 
+ - `npm i -D jsdoc` to install as a dev dependency JSDoc
  
  <b>Running Standard </b>
  - update jsdoc.json config file with relevant file locations for source and destination
