@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Documentation using JSDoc</title>
+    <title>JSDoc: Source: main_scripts/popular_units.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,34 @@
 
 <div id="main">
 
-    <h1 class="page-title">Documentation using JSDoc</h1>
+    <h1 class="page-title">Source: main_scripts/popular_units.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>
 
+/**
+ * POPULAR UNITS is a map that stores all the popular units for each unit type
+    Example : The some popular units for length type are : meters, kilometers, miles
+    @type {*} 
+ */
+const POPULAR_UNITS = {
+    "length": ["meters", "miles", "kilometers", "centimeters", "millimeters", "yard", "feet", "inch", "furlong", "chain"],
+    "mass": ["grams", "kilograms", "pounds", "ounces", "tonnes", "ton", "milligrams", "micrograms"],
+    "temperature": ["celcius", "fahrenheit", "kelvin"],
+    "currency": ["usd", "eur", "gbp", "inr", "jpy", "cad","aud","chf"],
+    "time": ["seconds", "minutes", "hours", "days", "weeks"],
+}
 
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+const PRE_SYMBOLS = new Set(["$", "₹", "€", "£", "¥", "Can$", "C$", "CA$", "A$", "AU$"])
+</code></pre>
+        </article>
+    </section>
 
 
 

@@ -5,7 +5,7 @@
 class Temperature {
     /**
      * 
-     * @param {Object} unit Temperature Unit
+     * @param {*} unit Temperature Unit
      * @param {Array} arr Stores the different conversion rate
      */
     constructor(unit, arr) {
@@ -17,7 +17,7 @@ class Temperature {
     /**
      *Our standard conversion is celcius, so we try to convert all selection to celcius
      *@property {Function} getStandardConversion all units converted to celcius
-     * @param {Object} quantity user query unit
+     * @param {*} quantity user query unit
      * @returns Value in Celcius
      */
 
@@ -37,7 +37,7 @@ class Temperature {
     /**
      *From our standard conversion we try to convert into all the other units specified in arr property of this class
     with a precision no more than 10
-     * @param {Object} quantity value to convert
+     * @param {*} quantity value to convert
      * @param {number} precision upto this number precision
      * @returns precise upto 10 converted value 
      */
