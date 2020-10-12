@@ -17,6 +17,8 @@ The following is a set of guidelines for contributing to Smart Units Converter, 
 [Styleguides](#styleguides)
   * [Git Commit Messages](#git-commit-messages)
 
+[Documentation](#documentation)
+
 ## Code of Conduct
 
 This project and everyone participating in it is governed by the [code of conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [bjdemick@ncsu.edu](mailto:bjdemick@ncsu.edu).
@@ -112,5 +114,5 @@ While the prerequisites above must be satisfied prior to having your pull reques
  
  <b>Running Standard </b>
  - update jsdoc.json config file with relevant file locations for source and destination
- - add the doc location under scripts in package.json as - jsdoc -c jsdoc.json
- - 
+ - add the doc location under scripts in package.json as -> jsdoc -c jsdoc.json
+ - after making any changes with the pattern .js under code directory use -> npm run doc command to update the html file in docs directory
