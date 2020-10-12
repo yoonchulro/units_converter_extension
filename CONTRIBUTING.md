@@ -103,3 +103,14 @@ While the prerequisites above must be satisfied prior to having your pull reques
  - go to root of project and type `standard` if StandardJs is installed globally
  - go to root of project and type `npx standard` if StandardJs is installed locally 
  - Instead of installing it using npm, you can also use the extension available on VS Code 
+ 
+ ## Documentation
+ ### JSDoc
+ <b>Installation</b>
+ - `npm init -y` To create a package.json
+ - `npm i -D jsdoc` Installs as a dev dependency JSDoc'
+ 
+ <b>Running Standard </b>
+ - update jsdoc.json config file with relevant file locations for source and destination
+ - add the doc location under scripts in package.json as - jsdoc -c jsdoc.json
+ - 
