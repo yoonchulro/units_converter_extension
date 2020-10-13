@@ -1,11 +1,11 @@
 
-/*
-    This a comprehensive array of all units that will be recognized by the chrome extension
+/**
+ *  This a comprehensive array of all units that will be recognized by the chrome extension
     Each Unit will have 3 attributes : 
     1) unit : this the name of the unit that we plan to recongnize
     2) type : what type of attribute the unit represents : LENGTH, TIME, CURRENCY etc.
     3) aliases : what other representations the unit has 
-*/
+ */
 
 const UNITS = [
     {
