@@ -1,11 +1,27 @@
-//Our mass class handles all mass related conversions
+
+
+/**
+ * Our mass class handles all mass related conversions
+ */
+
 class Mass {
+    /**
+     * 
+     * @param {Object} unit Mass unit
+     * @param {Array} arr Array of all conversions
+     */
     constructor(unit, arr) {
         this.unit = unit;
         this.arr = arr;
     }
 
-    //Our standard conversion is Kilograms, so we try to convert all selection to Kilograms
+    /**
+     * Our standard conversion is Kilograms, so we try to convert all selection to Kilograms
+     * @property {Function} getStandardConversion function to convert into Kgs
+     * @param {Object} quantity user query unit
+     * @returns All values converted to Kilograms
+     */
+
     getStandardConversion(quantity) {
         //We use a switch case to make appropriate conversion
         switch (this.unit.toLowerCase()) {
@@ -21,8 +37,15 @@ class Mass {
         }
     }
 
-    /*From our standard conversion we try to convert into all the other units specified in arr property of this class
-    with a precision no more than 10*/
+
+    /**
+     *From our standard conversion we try to convert into all the other units specified in arr property of this class
+    with a precision no more than 10
+     * @param {Object} quantity value to convert
+     * @param {number} precision upto this number precise
+     * @returns connverted value with precision upto 10
+     */
+
     getAllConversions(quantity, precision) {
 
         let res = "";
