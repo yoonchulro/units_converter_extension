@@ -1,27 +1,12 @@
-/**
- *Our time class handles all temperature related conversions
- */
-
+//Our time class handles all temperature related conversions
 class Time {
-	/**
-	 * 
-	 * @param {*} unit Time unit
-	 * @param {Array} arr Array of all conversions
-	 */
-
 	constructor(unit, arr){
 		this.unit = unit;
 		this.arr = arr;
 	}
 
-	/**
-	 * Our standard conversion is seconds, so we try to convert all selection to seconds
-	 * @property {Function} getStandardConversion Units converted into Seconds
-	 * @param {*} quantity user query unit
-	 * @returns Value in Seconds
-	 */
+	//Our standard conversion is seconds, so we try to convert all selection to seconds
 	getStandardConversion(quantity) {
-		
 		switch(this.unit.toLowerCase()){
 			case "seconds": return quantity;
 			case "minutes": return quantity * 60;
@@ -31,15 +16,8 @@ class Time {
 			default: return null;
 		}
 	}
-	
-	/**
-	 * From our standard conversion we try to convert into all the other units specified in arr property of this class
-	with a precision no more than 10
-	 * @param {*} quantity value to convert
-	 * @param {number} precision upto this number precision
-	 * @returns precise value with precsion of upto 10
-	 */
-
+	/*From our standard conversion we try to convert into all the other units specified in arr property of this class
+    with a precision no more than 10*/
 	getAllConversions(quantity, precision){
 		let res = "";
 		this.arr.forEach((u) => {

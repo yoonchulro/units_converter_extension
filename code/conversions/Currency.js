@@ -1,25 +1,11 @@
-/**
- * Currency class handles all currency related conversions
- */
+//Our currency class handles all currency related conversions
 class Currency {
-  /**
-   * 
-   * @param {*} unit Currency Unit
-   * @param {Array} arr Stores the different conversion rates
-   */
   constructor(unit, arr) {
     this.unit = unit;
     this.arr = arr;
   }
 
-  
-  /**
-   * api call that fetches the conversion rate for a given query q, where q is the stock name. For eg: USD
-   * @property {Function} getData fetches live rates from the API
-   * @param {*} q Any user query for eg(U.S.D)
-   * @returns fetched data from the API
-   */
-  
+  //api call that fetches the conversion rate for a given query q, where q is the stock name. For eg: USD
   getData(q) {
     if (typeof fetch !== "function") {
       let fetch = require("node-fetch");
@@ -33,13 +19,7 @@ class Currency {
     }
   }
 
-  /**
-   * Function to get a number's precision
-   * @property {Function} getPrecision function for precision
-   * @param {number} - currency value
-   * @returns precise rate
-   */
-
+  //Get a number's precision
   getPrecision(number) {
     let parts = number.toString().split(".");
     if (parts.length <= 1) {
@@ -49,27 +29,14 @@ class Currency {
     return intlen + parts[1].length;
   }
 
-/**
- * Function to get a maximum precision of 10
- * @param {number} number currency value
- * @param {number} precision precision value
- * @returns precise value of upto 10
- */
-  
+  //Return number with a max precison of 10
   getPreciseNumber(number, precision) {
     return number.toPrecision(
       Math.min(Math.max(this.getPrecision(number), precision), 10)
     );
   }
 
-  
-  /**
-   * Our standard conversion is USD, so we try to convert all selection to USD
-   * @param {*} quantity 
-   * @returns value in standard conversion rate - USD
-   */
-
-
+  //Our standard conversion is USD, so we try to convert all selection to USD
   async getStandardConversion(quantity) {
     let rate;
     switch (this.unit.toLowerCase()) {
@@ -115,16 +82,8 @@ class Currency {
     }
   }
 
-  
-  
-  /**
-   * From our standard conversion we try to convert into all the other units specified in arr property of this class
-    with a precision no more than 10
-   * @param {Object} quantity  Selections converted to USD
-   * @param {number} precision Calls our previour function to get precise value
-   * @returns an array with precision
-   */
-
+  /*From our standard conversion we try to convert into all the other units specified in arr property of this class
+    with a precision no more than 10*/
   async getAllConversions(quantity, precision) {
     let res = "";
     let factor = 1;
