@@ -1,12 +1,25 @@
-/*Our Length class handles all length related conversions. Currently implemented conversions are 
-[meters, miles, kilometers, centimeters, millimeters, yard, feet, inch, furlong, chain]*/
+/**
+ * Our Length class handles all length related conversions. Currently implemented conversions are 
+[meters, miles, kilometers, centimeters, millimeters, yard, feet, inch, furlong, chain]
+ */
+
 class Length {
+  /**
+   * 
+   * @param {*} unit Length Unit
+   * @param {Array} arr Array of all conversions
+   */
   constructor(unit, arr) {
     this.unit = unit;
     this.arr = arr;
   }
 
-  //Get a number's precision
+  /**
+   * Get a number's precision
+   * @property {Function} getPrecision function for precision 
+   * @param {number} number 
+   * @returns precise numbers
+   */
   getPrecision(number) {
     let parts = number.toString().split(".");
     if (parts.length <= 1) {
@@ -16,16 +29,27 @@ class Length {
     return intlen + parts[1].length;
   }
 
-  //Return number with a max precison of 10
+
+  /**
+   * Return number with a max precison of 10
+   * @param {number} number value to convert
+   * @param {number} precision upto number precision
+   * @returns precise value with precision of upto 10
+   */
   getPreciseNumber(number, precision) {
     return number.toPrecision(
       Math.min(Math.max(this.getPrecision(number), precision), 10)
     );
   }
 
-  //Our standard conversion is meters, so we try to convert all selection to meters
+  /**
+   * Our standard conversion is meters, so we try to convert all selection to meters
+   * @param {*} quantity 
+   */
   getStandardConversion(quantity) {
-    //We use a switch case to make appropriate conversion
+    /**
+     * We use a switch case to make appropriate conversion
+     */
     switch (this.unit.toLowerCase()) {
       case "meters":
         return quantity;
@@ -52,8 +76,15 @@ class Length {
     }
   }
 
-  /*From our standard conversion we try to convert into all the other units specified in arr property of this class
-    with a precision no more than 10*/
+
+  /**
+   *From our standard conversion we try to convert into all the other units specified in arr property of this class
+    with a precision no more than 10*
+   * @param {*} quantity 
+   * @param {number} precision precision restricted to 10
+   * @returns Array with coverted rate
+   */
+  
   getAllConversions(quantity, precision) {
     let res = "";
     this.arr.forEach((u) => {

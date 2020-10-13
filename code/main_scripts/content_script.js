@@ -4,12 +4,16 @@ unitModal.setAttribute('class', 'modal');
 unitModal.style.visibility = 'hidden';
 document.body.appendChild(unitModal);
 
-// This function checks selected text (if any) when the mouse button is released and checks if  we can convert it into units
+/**
+ * @property {Function} document  This function checks selected text (if any) when the mouse button is released and checks if  we can convert it into unit
+ */
 document.addEventListener('mouseup', (e) => {
     let selection = window.getSelection().toString().trim();
     const MAX_LENGTH = 30;
 
-    //selected text is should be between lengths 0 - max_length
+    /**
+     *selected text is should be between lengths 0 - max_length 
+     */
     if (selection.length > 0 && selection.length < MAX_LENGTH) {
 
         // Get all possible unit conversions for given selections
@@ -28,12 +32,21 @@ document.addEventListener('mouseup', (e) => {
 
 }, false);
 
-// This function hides the modal when the mouse button is pressed
+/**
+ * 
+ * @property {Function} document This function hides the modal when the mouse button is pressed
+ */
 document.addEventListener('mousedown', (e) => {
     unitModal.style.visibility = 'hidden';
 }, false);
 
-// Display the modal at the cursor location and make it visible
+
+/**
+ * @property {Function} showModal Display the modal at the cursor location and make it visible
+ * @param {*} mouseX 
+ * @param {*} mouseY 
+ * @param {*} html 
+ */
 function showModal(mouseX, mouseY, html) {
     unitModal.innerHTML = html;
     unitModal.style.top = document.documentElement.scrollTop + mouseY + 'px';
