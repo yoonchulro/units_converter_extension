@@ -116,4 +116,4 @@ While the prerequisites above must be satisfied prior to having your pull reques
  <b>Running JSDoc </b>
  - update jsdoc.json config file with relevant file locations for source and destination
  - add the doc location under scripts in package.json as `jsdoc -c jsdoc.json`
- - after making any changes with the pattern .js under code directory use `npm run doc` command to update the html file in docs directory
+ - after making any changes in the javascript files under code directory use `npm run doc` command to update the html file in docs directory
