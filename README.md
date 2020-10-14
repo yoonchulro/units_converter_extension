@@ -38,6 +38,15 @@ Click on the image below to preview the working of the extension<br/>
 - `npm install standard --global` in comand line interface to install globally
 - `npm install standard --save-dev` in command line interface to install locally 
 
+### IDE and Code Formatter
+* [Visual Studio Code](https://code.visualstudio.com/) IDE
+* [Prettier Formatter for Visual Studio Code](https://github.com/prettier/prettier-vscode/blob/main/README.md)
+ - Prettier is an opinionated code formatter. It enforces a consistent style by parsing your code and re-printing it with its own rules that take the maximum line length into account, wrapping code when necessary.
+#### Installation
+  *  Install through VS Code extensions. Search for Prettier - Code formatter
+  * It can also be installed in VS Code: Launch VS Code Quick Open (Ctrl+P), paste the following command, and press enter.
+  `ext install esbenp.prettier-vscode`
+  
  <b>Running Standard Js</b> 
  - go to root of project and type `standard` if StandardJs is installed globally
  - go to root of project and type `npx standard` if StandardJs is installed locally 
