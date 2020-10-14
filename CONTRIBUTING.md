@@ -91,7 +91,20 @@ While the prerequisites above must be satisfied prior to having your pull reques
 * Limit the first line to 72 characters or less
 * Reference issues and pull requests liberally after the first line
 * When only changing documentation, include `[ci skip]` in the commit title
-   
+ 
+### Code Formatter
+* [Visual Studio Code](https://code.visualstudio.com/) IDE
+* [Prettier Formatter for Visual Studio Code](https://github.com/prettier/prettier-vscode/blob/main/README.md)
+ - Prettier is an opinionated code formatter. It enforces a consistent style by parsing your code and re-printing it with its own rules that take the maximum line length into account, wrapping code when necessary.
+#### Installation
+  *  Install through VS Code extensions. Search for Prettier - Code formatter
+  * It can also be installed in VS Code: Launch VS Code Quick Open (Ctrl+P), paste the following command, and press enter.
+  `ext install esbenp.prettier-vscode`
+  * To install prettier in your project and pin its version: 
+   `npm install prettier -D --save-exact`
+ #### Format On Save
+  * Moreover, you choose editor.formatOnSave setting to automatimally let Visual Studio Code IDE format the code on saving modifcations.
+ 
  ## Attribution
  * These contribution instructions were adapted from [Atom's Contributing.md](https://github.com/atom/atom/blob/master/CONTRIBUTING.md)
 
