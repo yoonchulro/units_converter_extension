@@ -1,5 +1,3 @@
-
-
 /**
  * Our temperature class handles all temperature related conversions
  */
@@ -18,7 +16,7 @@ class Temperature {
     
     /**
      *Our standard conversion is celcius, so we try to convert all selection to celcius
-     *@property {Function} getStandardConversion all units converted to celcius
+     * @property {Function} getStandardConversion all units converted to celcius
      * @param {Object} quantity user query unit
      * @returns Value in Celcius
      */
@@ -28,7 +26,7 @@ class Temperature {
          * We use a switch case to make appropriate conversion
          */
         switch (this.unit.toLowerCase()) {
-            case "celcius": return quantity;
+            case "celsius": return quantity;
             case "kelvin": return quantity - 273.15;
             case "fahrenheit": return ((quantity - 32) / 9) * 5;
             default: return null;
@@ -49,7 +47,7 @@ class Temperature {
         let res = "";
         this.arr.forEach((u) => {
             switch (u.toLowerCase()) {
-                case "celcius": res += "," +getPreciseNumber(quantity,precision) + " °C"; break;
+                case "celsius": res += "," +getPreciseNumber(quantity,precision) + " °C"; break;
                 case "kelvin": {
                     let conv = quantity + 273.15;
                     res += "," + getPreciseNumber(conv, precision) + " °K";
@@ -65,12 +63,6 @@ class Temperature {
 
         return res;
     }
-
-
 }
 
 module.exports = Temperature;
-
-
-
-
