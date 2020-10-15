@@ -23,10 +23,7 @@ describe("Mass", function () {
   });
 
   it("Kilogram conversion check", function () {
-    return expect(
-      kilos.getAllConversions(100, 1).then(function (data) {
-        return { mass: data.substring(1) };
-      })
-    ).to.eventually.haveOwnProperty("mass");
+    var mass_data = kilos.getAllConversions(100, 1).substring(1);
+    return expect({ mass: mass_data }).to.haveOwnProperty("mass");
   });
 });
