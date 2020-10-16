@@ -30,8 +30,8 @@ Click on the image below to preview the working of the extension<br/>
 - HTML 
 - CSS
 ## Software Requirements
-- Node.js 
-- NPM
+- [Node.js v12.18.4](https://nodejs.org/en/download/)
+- [NPM v6.14.6](https://nodejs.org/en/download/)
 ## Style Checker and Analyzer
 ### Standard Js 
 <b>Installation</b>
