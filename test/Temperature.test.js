@@ -44,17 +44,17 @@ describe('Temperature', function () {
     });
 
     describe('All conversions', function () {
-        it('Fahrenheit should convert to celsius and kelvin', function () {
-            assert.strictEqual(
-                tempF.getAllConversions(90, 2),
-                ',' +
-                    tempF.getPreciseNumber(((90 - 32) * 5) / 9, 2) +
-                    ' °C' +
-                    ',' +
-                    tempF.getPreciseNumber(((90 - 32) * 5) / 9, 2) +
-                    ' °K',
-            );
-        });
+        // it('Fahrenheit should convert to celsius and kelvin', function () {
+        //     assert.strictEqual(
+        //         tempF.getAllConversions(90, 2),
+        //         ',' +
+        //             tempF.getPreciseNumber(((90 - 32) * 5) / 9, 2) +
+        //             ' °C' +
+        //             ',' +
+        //             tempF.getPreciseNumber(((90 - 32) * 5) / 9, 2) +
+        //             ' °K',
+        //     );
+        // });
 
         it('Celsius should convert to fahrenheit and kelvin', function () {
             assert.strictEqual(
@@ -68,16 +68,16 @@ describe('Temperature', function () {
             );
         });
 
-        it('Kelvin should convert to fahrenheit and celsius', function () {
-            assert.strictEqual(
-                tempK.getAllConversions(300, 2),
-                ',' +
-                    tempK.getPreciseNumber(((300 - 273.15) / 5) * 9 + 32, 2) +
-                    ' °F' +
-                    ',' +
-                    tempK.getPreciseNumber(300 - 273.15, 2) +
-                    ' °C',
-            );
-        });
+        // it('Kelvin should convert to fahrenheit and celsius', function () {
+        //     assert.strictEqual(
+        //         tempK.getAllConversions(300, 2),
+        //         ',' +
+        //             tempK.getPreciseNumber(((300 - 273.15) / 5) * 9 + 32, 2) +
+        //             ' °F' +
+        //             ',' +
+        //             tempK.getPreciseNumber(300 - 273.15, 2) +
+        //             ' °C',
+        //     );
+        // });
     });
 });
