@@ -37,14 +37,7 @@ Click on the image below to preview the working of the extension<br/>
 -   [Node.js v12.18.4](https://nodejs.org/en/download/)
 -   [NPM v6.14.6](https://nodejs.org/en/download/)
 
-## Style Checker and Analyzer
-
-### Standard Js
-
-<b>Installation</b>
-
--   `npm install standard --global` in comand line interface to install globally
--   `npm install standard --save-dev` in command line interface to install locally
+## Static Analysis Tools
 
 ### IDE and Code Formatter
 
@@ -59,11 +52,11 @@ Click on the image below to preview the working of the extension<br/>
 -   It can also be installed in VS Code: Launch VS Code Quick Open (Ctrl+P), paste the following command, and press enter.
     `ext install esbenp.prettier-vscode`
 
-<b>Running Standard Js</b>
-
--   go to root of project and type `standard` if StandardJs is installed globally
--   go to root of project and type `npx standard` if StandardJs is installed locally
--   Instead of installing it using npm, you can also use the extension available on VS Code
+### Code Coverage
+* [Istanbul with nyc](https://istanbul.js.org/) - Local coverage
+* [Coveralls](https://coveralls.io/) - Continuous integration coverage
+* Code coverage is automatically output on every pull request via Coveralls bot and on every local test via the `npm test` script.
+* <b>Installation:</b> all necessary modules are installed by running `npm install` from the root directory of the repository.
 
 ## Self-Rubric
 
