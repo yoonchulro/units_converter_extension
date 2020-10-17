@@ -71,37 +71,37 @@ class Currency {
             case 'usd':
                 return quantity;
             case 'eur':
-                rate = await this.getData('EUR').then(function (d) {
+                rate = await this.getData('EUR').then(function(d) {
                     return d['USD'];
                 });
                 return rate * quantity;
             case 'gbp':
-                rate = await this.getData('GBP').then(function (d) {
+                rate = await this.getData('GBP').then(function(d) {
                     return d['USD'];
                 });
                 return rate * quantity;
             case 'inr':
-                rate = await this.getData('INR').then(function (d) {
+                rate = await this.getData('INR').then(function(d) {
                     return d['USD'];
                 });
                 return rate * quantity;
             case 'jpy':
-                rate = await this.getData('JPY').then(function (d) {
+                rate = await this.getData('JPY').then(function(d) {
                     return d['USD'];
                 });
                 return rate * quantity;
             case 'cad':
-                rate = await this.getData('CAD').then(function (d) {
+                rate = await this.getData('CAD').then(function(d) {
                     return d['USD'];
                 });
                 return rate * quantity;
             case 'aud':
-                rate = await this.getData('AUD').then(function (d) {
+                rate = await this.getData('AUD').then(function(d) {
                     return d['USD'];
                 });
                 return rate * quantity;
             case 'chf':
-                rate = await this.getData('CHF').then(function (d) {
+                rate = await this.getData('CHF').then(function(d) {
                     return d['USD'];
                 });
                 return rate * quantity;
@@ -127,43 +127,43 @@ class Currency {
                     res += ',$ ' + this.getPreciseNumber(quantity, precision);
                     break;
                 case 'eur':
-                    factor = await this.getData('USD').then(function (d) {
+                    factor = await this.getData('USD').then(function(d) {
                         return d['EUR'];
                     });
                     res += ',€ ' + this.getPreciseNumber(factor * quantity, precision);
                     break;
                 case 'gbp':
-                    factor = await this.getData('USD').then(function (d) {
+                    factor = await this.getData('USD').then(function(d) {
                         return d['GBP'];
                     });
                     res += ',£ ' + this.getPreciseNumber(factor * quantity, precision);
                     break;
                 case 'inr':
-                    factor = await this.getData('USD').then(function (d) {
+                    factor = await this.getData('USD').then(function(d) {
                         return d['INR'];
                     });
                     res += ',₹ ' + this.getPreciseNumber(factor * quantity, precision);
                     break;
                 case 'jpy':
-                    factor = await this.getData('USD').then(function (d) {
+                    factor = await this.getData('USD').then(function(d) {
                         return d['JPY'];
                     });
                     res += ',¥ ' + this.getPreciseNumber(factor * quantity, precision);
                     break;
                 case 'cad':
-                    factor = await this.getData('USD').then(function (d) {
+                    factor = await this.getData('USD').then(function(d) {
                         return d['CAD'];
                     });
                     res += ',C$ ' + this.getPreciseNumber(factor * quantity, precision);
                     break;
                 case 'aud':
-                    factor = await this.getData('USD').then(function (d) {
+                    factor = await this.getData('USD').then(function(d) {
                         return d['AUD'];
                     });
                     res += ',AU$ ' + this.getPreciseNumber(factor * quantity, precision);
                     break;
                 case 'chf':
-                    factor = await this.getData('USD').then(function (d) {
+                    factor = await this.getData('USD').then(function(d) {
                         return d['CHF'];
                     });
                     res += ',Fr ' + this.getPreciseNumber(factor * quantity, precision);
