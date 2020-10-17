@@ -4,8 +4,8 @@ An extension that converts your selected values into popular units. Saves time, 
 
 ![MIT license](https://img.shields.io/badge/License-MIT-green.svg)
 [![GitHub issues](https://img.shields.io/github/issues/se20z09/units_converter_extension)](https://github.com/bhavesh242/units_converter_extension)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/se20z09/units_converter_extension)
 ![GitHub contributors](https://img.shields.io/github/contributors/se20z09/units_converter_extension)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![Build Status](https://travis-ci.com/se20z09/units_converter_extension.svg?branch=master)](https://travis-ci.com/se20z09/units_converter_extension)
 [![Coverage Status](https://coveralls.io/repos/github/se20z09/units_converter_extension/badge.svg?branch=master)](https://coveralls.io/github/se20z09/units_converter_extension?branch=master)
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/se20z09/units_converter_extension/maintainability)

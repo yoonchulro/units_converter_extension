@@ -1,38 +1,36 @@
 .modal {
-  visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: solid 1px;
-  border-radius: 2px;
-  box-shadow: 0 0 20px;
-  padding: 9px;
-  display: block;
-  background:#ffffff;
-  z-index: 1000;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: solid 1px;
+    border-radius: 2px;
+    box-shadow: 0 0 20px;
+    padding: 9px;
+    display: block;
+    background: #ffffff;
+    z-index: 1000;
 }
 
 .modal_heading {
-  font-weight: bold;
-  font: arial, sans-serif;
-  color: #030f53;
-  margin: 1px;
-  font-size: 100%;
-  padding: 2px;
+    font-weight: bold;
+    font: arial, sans-serif;
+    color: #030f53;
+    margin: 1px;
+    font-size: 100%;
+    padding: 2px;
 }
 
-
 .modal_newline {
-  background-color:#000000;
-  border-top: 1px solid #000000;
-  margin: 1px;
-  display: block;
+    background-color: #000000;
+    border-top: 1px solid #000000;
+    margin: 1px;
+    display: block;
 }
 
 .modal_content {
-  font: arial, sans-serif;
-  padding: 0px;
-  font-size: 100%;
-  margin: 0px;
+    font: arial, sans-serif;
+    padding: 0px;
+    font-size: 100%;
+    margin: 0px;
 }
-

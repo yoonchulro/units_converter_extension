@@ -1,4 +1,3 @@
-
 /**
  *  This a comprehensive array of all units that will be recognized by the chrome extension
     Each Unit will have 3 attributes : 
@@ -9,180 +8,178 @@
 
 const UNITS = [
     {
-        unit: "meters",
-        type: "length",
-        aliases: ["meter", "meters"]
+        unit: 'meters',
+        type: 'length',
+        aliases: ['meter', 'meters'],
     },
     {
-        unit: "kilograms",
-        type: "mass",
-        aliases: ["kilograms", "kilogram", "kgs", "kg"]
+        unit: 'kilograms',
+        type: 'mass',
+        aliases: ['kilograms', 'kilogram', 'kgs', 'kg'],
     },
     {
-        unit: "celcius",
-        type: "temperature",
-        aliases: ["celcius", "c", "°c"]
+        unit: 'celcius',
+        type: 'temperature',
+        aliases: ['celcius', 'c', '°c'],
     },
     {
-        unit: "fahrenheit",
-        type: "temperature",
-        aliases: ["fahrenheit", "f", "°f"]
+        unit: 'fahrenheit',
+        type: 'temperature',
+        aliases: ['fahrenheit', 'f', '°f'],
     },
     {
-        unit: "kelvin",
-        type: "temperature",
-        aliases: ["kelvin", "k", "°k"]
-    },
-	{
-        unit: "grams",
-        type: "mass",
-        aliases: ["grams", "gram", "gms", "gm"]
-    },
-	{
-        unit: "pounds",
-        type: "mass",
-        aliases: ["pounds", "pound", "lbs", "lb"]
-    },
-	{
-        unit: "tonne",
-        type: "mass",
-        aliases: ["metric tons", "metric ton", "tonnes", "tonne"]
-    },
-	{
-        unit: "milligrams",
-        type: "mass",
-        aliases: ["milligrams", "milligram", "mgs", "mg"]
-    },
-	{
-        unit: "micrograms",
-        type: "mass",
-        aliases: ["micrograms", "microgram"]
-    },
-	{
-        unit: "ounces",
-        type: "mass",
-        aliases: ["ounces", "ounce", "ozs", "oz"]
-    },
-	{
-        unit: "ton",
-        type: "mass",
-        aliases: ["tons", "ton"]
+        unit: 'kelvin',
+        type: 'temperature',
+        aliases: ['kelvin', 'k', '°k'],
     },
     {
-        unit: "USD",
-        type: "currency",
-        aliases: ["dollars", "dollar", "USD", "$"]
+        unit: 'grams',
+        type: 'mass',
+        aliases: ['grams', 'gram', 'gms', 'gm'],
     },
     {
-        unit: "EUR",
-        type: "currency",
-        aliases: ["euros", "euro", "EUR", "€"]
+        unit: 'pounds',
+        type: 'mass',
+        aliases: ['pounds', 'pound', 'lbs', 'lb'],
     },
     {
-        unit: "GBP",
-        type: "currency",
-        aliases: ["pounds", "pound", "GBP", "£"]
+        unit: 'tonne',
+        type: 'mass',
+        aliases: ['metric tons', 'metric ton', 'tonnes', 'tonne'],
     },
     {
-        unit: "INR",
-        type: "currency",
-        aliases: ["rupees", "rupee", "INR", "₹"]
+        unit: 'milligrams',
+        type: 'mass',
+        aliases: ['milligrams', 'milligram', 'mgs', 'mg'],
     },
     {
-        unit: "CAD",
-        type: "currency",
-        aliases: ["Can$", "C$", "CA$","CAD"]
+        unit: 'micrograms',
+        type: 'mass',
+        aliases: ['micrograms', 'microgram'],
     },
     {
-        unit: "JPY",
-        type: "currency",
-        aliases: ["¥","yen","yuan"]
+        unit: 'ounces',
+        type: 'mass',
+        aliases: ['ounces', 'ounce', 'ozs', 'oz'],
     },
     {
-        unit: "AUD",
-        type: "currency",
-        aliases: ["AU$","A$","AUD"]
+        unit: 'ton',
+        type: 'mass',
+        aliases: ['tons', 'ton'],
     },
     {
-        unit: "CHF",
-        type: "currency",
-        aliases: ["franc","francs","CHF"]
+        unit: 'USD',
+        type: 'currency',
+        aliases: ['dollars', 'dollar', 'USD', '$'],
     },
     {
-        unit: "meters",
-        type: "length",
-        aliases: ["meter", "meters", "m", "mts"]
+        unit: 'EUR',
+        type: 'currency',
+        aliases: ['euros', 'euro', 'EUR', '€'],
     },
     {
-        unit: "kilometers",
-        type: "length",
-        aliases: ["kilometer", "kilometers", "km", "kms"]
+        unit: 'GBP',
+        type: 'currency',
+        aliases: ['pounds', 'pound', 'GBP', '£'],
     },
     {
-        unit: "miles",
-        type: "length",
-        aliases: ["miles", "mile", "mi"]
+        unit: 'INR',
+        type: 'currency',
+        aliases: ['rupees', 'rupee', 'INR', '₹'],
     },
     {
-        unit: "centimeters",
-        type: "length",
-        aliases: ["centimeter", "centimeters", "cm", "cms"]
+        unit: 'CAD',
+        type: 'currency',
+        aliases: ['Can$', 'C$', 'CA$', 'CAD'],
     },
     {
-        unit: "millimeters",
-        type: "length",
-        aliases: ["millimeter", "millimeters", "mm", "mms"]
+        unit: 'JPY',
+        type: 'currency',
+        aliases: ['¥', 'yen', 'yuan'],
     },
     {
-        unit: "yard",
-        type: "length",
-        aliases: ["yard", "yards", "yd", "yds"]
+        unit: 'AUD',
+        type: 'currency',
+        aliases: ['AU$', 'A$', 'AUD'],
     },
     {
-        unit: "feet",
-        type: "length",
-        aliases: ["foot", "feet", "ft", "fts"]
+        unit: 'CHF',
+        type: 'currency',
+        aliases: ['franc', 'francs', 'CHF'],
     },
     {
-        unit: "inch",
-        type: "length",
-        aliases: ["inches", "inch", "\""]
+        unit: 'meters',
+        type: 'length',
+        aliases: ['meter', 'meters', 'm', 'mts'],
     },
     {
-        unit: "furlong",
-        type: "length",
-        aliases: ["furlong", "furlongs", "fur", "furss"]
+        unit: 'kilometers',
+        type: 'length',
+        aliases: ['kilometer', 'kilometers', 'km', 'kms'],
     },
     {
-        unit: "chain",
-        type: "length",
-        aliases: ["chain", "chains"]
+        unit: 'miles',
+        type: 'length',
+        aliases: ['miles', 'mile', 'mi'],
     },
     {
-        unit: "seconds",
-        type: "time",
-        aliases: ["sec", "s", "secs", "second", "seconds"]
+        unit: 'centimeters',
+        type: 'length',
+        aliases: ['centimeter', 'centimeters', 'cm', 'cms'],
     },
     {
-        unit: "minutes",
-        type: "time", 
-        aliases: ["mins", "min", "minute", "minutes"]
+        unit: 'millimeters',
+        type: 'length',
+        aliases: ['millimeter', 'millimeters', 'mm', 'mms'],
     },
     {
-        unit: "hours",
-        type: "time",
-        aliases: ["hrs", "h", "hour", "hours"]
+        unit: 'yard',
+        type: 'length',
+        aliases: ['yard', 'yards', 'yd', 'yds'],
     },
     {
-        unit: "days",
-        type: "time",
-        aliases: ["day", "days"]
+        unit: 'feet',
+        type: 'length',
+        aliases: ['foot', 'feet', 'ft', 'fts'],
     },
     {
-        unit: "weeks",
-        type: "time",
-        aliases: ["week", "wks", "weeks"]
-    }
-]
-
-
+        unit: 'inch',
+        type: 'length',
+        aliases: ['inches', 'inch', '"'],
+    },
+    {
+        unit: 'furlong',
+        type: 'length',
+        aliases: ['furlong', 'furlongs', 'fur', 'furss'],
+    },
+    {
+        unit: 'chain',
+        type: 'length',
+        aliases: ['chain', 'chains'],
+    },
+    {
+        unit: 'seconds',
+        type: 'time',
+        aliases: ['sec', 's', 'secs', 'second', 'seconds'],
+    },
+    {
+        unit: 'minutes',
+        type: 'time',
+        aliases: ['mins', 'min', 'minute', 'minutes'],
+    },
+    {
+        unit: 'hours',
+        type: 'time',
+        aliases: ['hrs', 'h', 'hour', 'hours'],
+    },
+    {
+        unit: 'days',
+        type: 'time',
+        aliases: ['day', 'days'],
+    },
+    {
+        unit: 'weeks',
+        type: 'time',
+        aliases: ['week', 'wks', 'weeks'],
+    },
+];
