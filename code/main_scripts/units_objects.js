@@ -18,9 +18,9 @@ const UNITS = [
         aliases: ['kilograms', 'kilogram', 'kgs', 'kg'],
     },
     {
-        unit: 'celcius',
+        unit: 'celsius',
         type: 'temperature',
-        aliases: ['celcius', 'c', '°c'],
+        aliases: ['celsius', 'c', '°c'],
     },
     {
         unit: 'fahrenheit',

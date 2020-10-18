@@ -16,7 +16,7 @@ const POPULAR_UNITS = {
         'chain',
     ],
     mass: ['grams', 'kilograms', 'pounds', 'ounces', 'tonnes', 'ton', 'milligrams', 'micrograms'],
-    temperature: ['celcius', 'fahrenheit', 'kelvin'],
+    temperature: ['celsius', 'fahrenheit', 'kelvin'],
     currency: ['usd', 'eur', 'gbp', 'inr', 'jpy', 'cad', 'aud', 'chf'],
     time: ['seconds', 'minutes', 'hours', 'days', 'weeks'],
 };
