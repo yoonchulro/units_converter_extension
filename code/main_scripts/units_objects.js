@@ -182,4 +182,24 @@ const UNITS = [
         type: 'time',
         aliases: ['week', 'wks', 'weeks'],
     },
+    {
+        unit: 'joules',
+        type: 'energy',
+        aliases: ['joules', 'j'],
+    },
+    {
+        unit: 'british thermal units',
+        type: 'energy',
+        aliases: ['british thermal units', 'btu'],
+    },
+    {
+        unit: 'calories',
+        type: 'energy',
+        aliases: ['calories', 'cal'],
+    },
+    {
+        unit: 'watt hours',
+        type: 'energy',
+        aliases: ['watt hours', 'wh'],
+    },
 ];

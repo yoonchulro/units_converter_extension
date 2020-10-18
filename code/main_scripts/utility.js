@@ -25,8 +25,8 @@ function matches_filter(currentUnit) {
 
 /**
  * @property {Function} get_possible_conversions_list Function to return all popular units
- * @param {*} type
- * @param {string} currentUnit
+ * @param {String} type
+ * @param {String} currentUnit
  * @returns For a given unit, this function returns all the popular units that it can be converted into except itself
  */
 function get_possible_conversions_list(type, currentUnit) {
@@ -50,6 +50,8 @@ function get_conversion_class(type, unit) {
         return new Time(unit, get_possible_conversions_list(type, unit));
     } else if (type == 'mass') {
         return new Mass(unit, get_possible_conversions_list(type, unit));
+    } else if (type == 'energy') {
+        return new Energy(unit, get_possible_conversions_list(type, unit));
     }
 }
 
