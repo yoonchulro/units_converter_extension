@@ -12,7 +12,7 @@ An extension that converts your selected values into popular units. Saves time, 
 [![DOI](https://zenodo.org/badge/294249129.svg)](https://zenodo.org/badge/latestdoi/294249129)
 
 Click on the image below to preview the working of the extension<br/>
-[![Alt text](assets/units-upgrade.jpg)](https://www.youtube.com/watch?v=4vNOczPYUKs)
+[![Alt text](assets/units-upgrade.jpg)](https://www.youtube.com/watch?v=aA9o9XNz6bI)
 
 ## Installation
 
