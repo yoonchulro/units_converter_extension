@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>JSDoc: Global</title>
+
+        <script src="scripts/prettify/prettify.js"></script>
+        <script src="scripts/prettify/lang-css.js"></script>
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css" />
+        <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css" />
+    </head>
+
+    <body>
+        <div id="main">
+            <h1 class="page-title">Global</h1>
+
+            <section>
+                <header>
+                    <h2></h2>
+                </header>
+
+                <article>
+                    <div class="container-overview">
+                        <dl class="details"></dl>
+                    </div>
+
+                    <h3 class="subsection-title">Members</h3>
+
+                    <h4 class="name" id="POPULAR_UNITS">
+                        <span class="type-signature">(constant) </span>POPULAR_UNITS<span
+                            class="type-signature"
+                        ></span>
+                    </h4>
+
+                    <div class="description">
+                        <p>
+                            POPULAR UNITS is a map that stores all the popular units for each unit
+                            type Example : The some popular units for length type are : meters,
+                            kilometers, miles
+                        </p>
+                    </div>
+
+                    <dl class="details">
+                        <dt class="tag-source">Source:</dt>
+                        <dd class="tag-source">
+                            <ul class="dummy">
+                                <li>
+                                    <a href="main_scripts_popular_units.js.html"
+                                        >main_scripts/popular_units.js</a
+                                    >, <a href="main_scripts_popular_units.js.html#line5">line 5</a>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+
+                    <h4 class="name" id="UNITS">
+                        <span class="type-signature">(constant) </span>UNITS<span
+                            class="type-signature"
+                        ></span>
+                    </h4>
+
+                    <div class="description">
+                        <p>
+                            This a comprehensive array of all units that will be recognized by the
+                            chrome extension Each Unit will have 3 attributes : 1) unit : this the
+                            name of the unit that we plan to recongnize 2) type : what type of
+                            attribute the unit represents : LENGTH, TIME, CURRENCY etc. 3) aliases :
+                            what other representations the unit has
+                        </p>
+                    </div>
+
+                    <dl class="details">
+                        <dt class="tag-source">Source:</dt>
+                        <dd class="tag-source">
+                            <ul class="dummy">
+                                <li>
+                                    <a href="main_scripts_units_objects.js.html"
+                                        >main_scripts/units_objects.js</a
+                                    >, <a href="main_scripts_units_objects.js.html#line9">line 9</a>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+
+                    <h3 class="subsection-title">Methods</h3>
+
+                    <h4 class="name" id="descending_length">
+                        <span class="type-signature"></span>descending_length<span class="signature"
+                            >(a, b)</span
+                        ><span class="type-signature"></span>
+                    </h4>
+
+                    <h5>Parameters:</h5>
+
+                    <table class="params">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+
+                                <th>Type</th>
+
+                                <th class="last">Description</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="name"><code>a</code></td>
+
+                                <td class="type">
+                                    <span class="param-type">Array</span>
+                                </td>
+
+                                <td class="description last"><p>array of strings</p></td>
+                            </tr>
+
+                            <tr>
+                                <td class="name"><code>b</code></td>
+
+                                <td class="type">
+                                    <span class="param-type">Array</span>
+                                </td>
+
+                                <td class="description last"><p>array of strings</p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h5 class="subsection-title">Properties:</h5>
+
+                    <table class="props">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+
+                                <th>Type</th>
+
+                                <th class="last">Description</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="name"><code>descending_length</code></td>
+
+                                <td class="type">
+                                    <span class="param-type">function</span>
+                                </td>
+
+                                <td class="description last">
+                                    <p>
+                                        This is a sort function used to sort an array of string in
+                                        descending order of string lengths
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <dl class="details">
+                        <dt class="tag-source">Source:</dt>
+                        <dd class="tag-source">
+                            <ul class="dummy">
+                                <li>
+                                    <a href="main_scripts_utility.js.html"
+                                        >main_scripts/utility.js</a
+                                    >, <a href="main_scripts_utility.js.html#line11">line 11</a>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+
+                    <h5>Returns:</h5>
+
+                    <div class="param-desc">
+                        <p>sorted array in descending order of string lengths</p>
+                    </div>
+
+                    <h4 class="name" id="get_conversion_class">
+                        <span class="type-signature"></span>get_conversion_class<span
+                            class="signature"
+                            >(type, unit)</span
+                        ><span class="type-signature"></span>
+                    </h4>
+
+                    <h5>Parameters:</h5>
+
+                    <table class="params">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+
+                                <th>Type</th>
+
+                                <th class="last">Description</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="name"><code>type</code></td>
+
+                                <td class="type">
+                                    <span class="param-type">String</span>
+                                </td>
+
+                                <td class="description last"></td>
+                            </tr>
+
+                            <tr>
+                                <td class="name"><code>unit</code></td>
+
+                                <td class="type">
+                                    <span class="param-type">String</span>
+                                </td>
+
+                                <td class="description last"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h5 class="subsection-title">Properties:</h5>
+
+                    <table class="props">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+
+                                <th>Type</th>
+
+                                <th class="last">Description</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="name"><code>get_conversion_class</code></td>
+
+                                <td class="type">
+                                    <span class="param-type">function</span>
+                                </td>
+
+                                <td class="description last">
+                                    <p>Conversion lass from the unit type</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <dl class="details">
+                        <dt class="tag-source">Source:</dt>
+                        <dd class="tag-source">
+                            <ul class="dummy">
+                                <li>
+                                    <a href="main_scripts_utility.js.html"
+                                        >main_scripts/utility.js</a
+                                    >, <a href="main_scripts_utility.js.html#line42">line 42</a>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+
+                    <h5>Returns:</h5>
+
+                    <div class="param-desc">
+                        <p>
+                            Return appropriate conversion class from the conversion scripts based on
+                            unit type
+                        </p>
+                    </div>
+
+                    <h4 class="name" id="get_possible_conversions_list">
+                        <span class="type-signature"></span>get_possible_conversions_list<span
+                            class="signature"
+                            >(type, currentUnit)</span
+                        ><span class="type-signature"></span>
+                    </h4>
+
+                    <h5>Parameters:</h5>
+
+                    <table class="params">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+
+                                <th>Type</th>
+
+                                <th class="last">Description</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="name"><code>type</code></td>
+
+                                <td class="type">
+                                    <span class="param-type">*</span>
+                                </td>
+
+                                <td class="description last"></td>
+                            </tr>
+
+                            <tr>
+                                <td class="name"><code>currentUnit</code></td>
+
+                                <td class="type">
+                                    <span class="param-type">string</span>
+                                </td>
+
+                                <td class="description last"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h5 class="subsection-title">Properties:</h5>
+
+                    <table class="props">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+
+                                <th>Type</th>
+
+                                <th class="last">Description</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="name"><code>get_possible_conversions_list</code></td>
+
+                                <td class="type">
+                                    <span class="param-type">function</span>
+                                </td>
+
+                                <td class="description last">
+                                    <p>Function to return all popular units</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <dl class="details">
+                        <dt class="tag-source">Source:</dt>
+                        <dd class="tag-source">
+                            <ul class="dummy">
+                                <li>
+                                    <a href="main_scripts_utility.js.html"
+                                        >main_scripts/utility.js</a
+                                    >, <a href="main_scripts_utility.js.html#line32">line 32</a>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+
+                    <h5>Returns:</h5>
+
+                    <div class="param-desc">
+                        <p>
+                            For a given unit, this function returns all the popular units that it
+                            can be converted into except itself
+                        </p>
+                    </div>
+
+                    <h4 class="name" id="getPreciseNumber">
+                        <span class="type-signature"></span>getPreciseNumber<span class="signature"
+                            >(number, precision)</span
+                        ><span class="type-signature"></span>
+                    </h4>
+
+                    <h5>Parameters:</h5>
+
+                    <table class="params">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+
+                                <th>Type</th>
+
+                                <th class="last">Description</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="name"><code>number</code></td>
+
+                                <td class="type">
+                                    <span class="param-type">number</span>
+                                </td>
+
+                                <td class="description last"></td>
+                            </tr>
+
+                            <tr>
+                                <td class="name"><code>precision</code></td>
+
+                                <td class="type">
+                                    <span class="param-type">number</span>
+                                </td>
+
+                                <td class="description last"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h5 class="subsection-title">Properties:</h5>
+
+                    <table class="props">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+
+                                <th>Type</th>
+
+                                <th class="last">Description</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="name"><code>getPreciseNumber</code></td>
+
+                                <td class="type">
+                                    <span class="param-type">function</span>
+                                </td>
+
+                                <td class="description last"><p>function for precise number</p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <dl class="details">
+                        <dt class="tag-source">Source:</dt>
+                        <dd class="tag-source">
+                            <ul class="dummy">
+                                <li>
+                                    <a href="main_scripts_utility.js.html"
+                                        >main_scripts/utility.js</a
+                                    >, <a href="main_scripts_utility.js.html#line78">line 78</a>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+
+                    <h5>Returns:</h5>
+
+                    <div class="param-desc">
+                        <p>Return number with a max precison of 10</p>
+                    </div>
+
+                    <h4 class="name" id="getPrecision">
+                        <span class="type-signature"></span>getPrecision<span class="signature"
+                            >(number)</span
+                        ><span class="type-signature"></span>
+                    </h4>
+
+                    <div class="description">
+                        <p>Get a number's precision</p>
+                    </div>
+
+                    <h5>Parameters:</h5>
+
+                    <table class="params">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+
+                                <th>Type</th>
+
+                                <th class="last">Description</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="name"><code>number</code></td>
+
+                                <td class="type">
+                                    <span class="param-type">number</span>
+                                </td>
+
+                                <td class="description last"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h5 class="subsection-title">Properties:</h5>
+
+                    <table class="props">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+
+                                <th>Type</th>
+
+                                <th class="last">Description</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="name"><code>getPrecision</code></td>
+
+                                <td class="type">
+                                    <span class="param-type">function</span>
+                                </td>
+
+                                <td class="description last">
+                                    <p>function for a number's precision</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <dl class="details">
+                        <dt class="tag-source">Source:</dt>
+                        <dd class="tag-source">
+                            <ul class="dummy">
+                                <li>
+                                    <a href="main_scripts_utility.js.html"
+                                        >main_scripts/utility.js</a
+                                    >, <a href="main_scripts_utility.js.html#line62">line 62</a>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+
+                    <h5>Returns:</h5>
+
+                    <div class="param-desc">
+                        <p>number's precison</p>
+                    </div>
+
+                    <h4 class="name" id="matches_filter">
+                        <span class="type-signature"></span>matches_filter<span class="signature"
+                            >(currentUnit)</span
+                        ><span class="type-signature"></span>
+                    </h4>
+
+                    <h5>Parameters:</h5>
+
+                    <table class="params">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+
+                                <th>Type</th>
+
+                                <th class="last">Description</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="name"><code>currentUnit</code></td>
+
+                                <td class="type">
+                                    <span class="param-type">String</span>
+                                </td>
+
+                                <td class="description last"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h5 class="subsection-title">Properties:</h5>
+
+                    <table class="props">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+
+                                <th>Type</th>
+
+                                <th class="last">Description</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="name"><code>matches_filter</code></td>
+
+                                <td class="type">
+                                    <span class="param-type">function</span>
+                                </td>
+
+                                <td class="description last">
+                                    <p>
+                                        This is a filtering function used by
+                                        get_possible_conversions_list to filter out the current unit
+                                        itself
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <dl class="details">
+                        <dt class="tag-source">Source:</dt>
+                        <dd class="tag-source">
+                            <ul class="dummy">
+                                <li>
+                                    <a href="main_scripts_utility.js.html"
+                                        >main_scripts/utility.js</a
+                                    >, <a href="main_scripts_utility.js.html#line20">line 20</a>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+
+                    <h5>Returns:</h5>
+
+                    <div class="param-desc">
+                        <p>filtered current unit</p>
+                    </div>
+                </article>
+            </section>
+        </div>
+
+        <nav>
+            <h2><a href="index.html">Home</a></h2>
+            <h3>Classes</h3>
+            <ul>
+                <li><a href="Currency.html">Currency</a></li>
+                <li><a href="Length.html">Length</a></li>
+                <li><a href="Mass.html">Mass</a></li>
+                <li><a href="Temperature.html">Temperature</a></li>
+                <li><a href="Time.html">Time</a></li>
+            </ul>
+            <h3>Global</h3>
+            <ul>
+                <li><a href="global.html#descending_length">descending_length</a></li>
+                <li><a href="global.html#get_conversion_class">get_conversion_class</a></li>
+                <li>
+                    <a href="global.html#get_possible_conversions_list"
+                        >get_possible_conversions_list</a
+                    >
+                </li>
+                <li><a href="global.html#getPreciseNumber">getPreciseNumber</a></li>
+                <li><a href="global.html#getPrecision">getPrecision</a></li>
+                <li><a href="global.html#matches_filter">matches_filter</a></li>
+                <li><a href="global.html#POPULAR_UNITS">POPULAR_UNITS</a></li>
+                <li><a href="global.html#UNITS">UNITS</a></li>
+            </ul>
+        </nav>
+
+        <br class="clear" />
+
+        <footer>
+            Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on
+            Thu Oct 22 2020 16:31:56 GMT-0400 (Eastern Daylight Time)
+        </footer>
+
+        <script>
+            prettyPrint();
+        </script>
+        <script src="scripts/linenumber.js"></script>
+    </body>
+</html>
