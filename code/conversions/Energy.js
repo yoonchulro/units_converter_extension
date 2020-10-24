@@ -30,7 +30,7 @@ class Energy {
 
     /**
      * Function to get a maximum precision of 10
-     * @param {number} number currency value
+     * @param {number} number energy value
      * @param {number} precision precision value
      * @returns precise value of upto 10
      */
@@ -52,7 +52,7 @@ class Energy {
             case 'joules':
                 return quantity;
             case 'british thermal units':
-                return quantity / 1055.0559;
+                return quantity * 1055.0559;
             case 'calories':
                 return quantity * 4.184;
             case 'watt hours':
@@ -76,7 +76,7 @@ class Energy {
                     res += ',' + this.getPreciseNumber(quantity, precision) + ' J';
                     break;
                 case 'british thermal units': {
-                    let conv = quantity * 1055.0559;
+                    let conv = quantity / 1055.0559;
                     res += ',' + this.getPreciseNumber(conv, precision) + ' BTU';
                     break;
                 }
