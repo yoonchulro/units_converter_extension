@@ -18,9 +18,9 @@ const UNITS = [
         aliases: ['kilograms', 'kilogram', 'kgs', 'kg'],
     },
     {
-        unit: 'celcius',
+        unit: 'celsius',
         type: 'temperature',
-        aliases: ['celcius', 'c', '°c'],
+        aliases: ['celsius', 'c', '°c'],
     },
     {
         unit: 'fahrenheit',
@@ -181,5 +181,25 @@ const UNITS = [
         unit: 'weeks',
         type: 'time',
         aliases: ['week', 'wks', 'weeks'],
+    },
+    {
+        unit: 'joules',
+        type: 'energy',
+        aliases: ['joules', 'joule', 'j'],
+    },
+    {
+        unit: 'british thermal units',
+        type: 'energy',
+        aliases: ['british thermal units', 'british thermal unit', 'btus', 'btu'],
+    },
+    {
+        unit: 'calories',
+        type: 'energy',
+        aliases: ['calories', 'calorie', 'cal'],
+    },
+    {
+        unit: 'watt hours',
+        type: 'energy',
+        aliases: ['watt hours', 'watt hour', 'wh'],
     },
 ];

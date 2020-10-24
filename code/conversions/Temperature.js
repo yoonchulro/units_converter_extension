@@ -19,7 +19,6 @@ class Temperature {
      * @param {number} - currency value
      * @returns precise rate
      */
-
     getPrecision(number) {
         let parts = number.toString().split('.');
         if (parts.length <= 1) {
@@ -35,18 +34,16 @@ class Temperature {
      * @param {number} precision precision value
      * @returns precise value of upto 10
      */
-
     getPreciseNumber(number, precision) {
         return number.toPrecision(Math.min(Math.max(this.getPrecision(number), precision), 10));
     }
 
     /**
-     *Our standard conversion is celcius, so we try to convert all selection to celcius
-     * @property {Function} getStandardConversion all units converted to celcius
+     *Our standard conversion is celsius, so we try to convert all selection to celsius
+     * @property {Function} getStandardConversion all units converted to celsius
      * @param {Object} quantity user query unit
-     * @returns Value in Celcius
+     * @returns Value in celsius
      */
-
     getStandardConversion(quantity) {
         /**
          * We use a switch case to make appropriate conversion
@@ -70,7 +67,6 @@ class Temperature {
      * @param {number} precision upto this number precision
      * @returns precise upto 10 converted value 
      */
-
     getAllConversions(quantity, precision) {
         let res = '';
         this.arr.forEach(u => {

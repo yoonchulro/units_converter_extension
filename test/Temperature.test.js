@@ -33,29 +33,26 @@ describe('Temperature', function() {
         it('Fahrenheit should convert to celsius', function() {
             assert.strictEqual(tempF.getStandardConversion(90), ((90 - 32) / 9) * 5);
         });
-
         it('Celsius should return celsius', function() {
             assert.strictEqual(tempC.getStandardConversion(25), 25);
         });
-
         it('Kelvin should convert to celsius', function() {
             assert.strictEqual(tempK.getStandardConversion(300), 300 - 273.15);
         });
     });
 
     describe('All conversions', function() {
-        // it('Fahrenheit should convert to celsius and kelvin', function () {
-        //     assert.strictEqual(
-        //         tempF.getAllConversions(90, 2),
-        //         ',' +
-        //             tempF.getPreciseNumber(((90 - 32) * 5) / 9, 2) +
-        //             ' °C' +
-        //             ',' +
-        //             tempF.getPreciseNumber(((90 - 32) * 5) / 9, 2) +
-        //             ' °K',
-        //     );
-        // });
-
+        it('Fahrenheit should convert to celsius and kelvin', function() {
+            assert.strictEqual(
+                tempF.getAllConversions(90, 2),
+                ',' +
+                    tempF.getPreciseNumber(90, 2) +
+                    ' °C' +
+                    ',' +
+                    tempF.getPreciseNumber(90 + 273.15, 2) +
+                    ' °K',
+            );
+        });
         it('Celsius should convert to fahrenheit and kelvin', function() {
             assert.strictEqual(
                 tempC.getAllConversions(25, 2),
@@ -67,17 +64,16 @@ describe('Temperature', function() {
                     ' °K',
             );
         });
-
-        // it('Kelvin should convert to fahrenheit and celsius', function () {
-        //     assert.strictEqual(
-        //         tempK.getAllConversions(300, 2),
-        //         ',' +
-        //             tempK.getPreciseNumber(((300 - 273.15) / 5) * 9 + 32, 2) +
-        //             ' °F' +
-        //             ',' +
-        //             tempK.getPreciseNumber(300 - 273.15, 2) +
-        //             ' °C',
-        //     );
-        // });
+        it('Kelvin should convert to fahrenheit and celsius', function() {
+            assert.strictEqual(
+                tempK.getAllConversions(300, 2),
+                ',' +
+                    tempK.getPreciseNumber((300 / 5) * 9 + 32, 2) +
+                    ' °F' +
+                    ',' +
+                    tempK.getPreciseNumber(300, 2) +
+                    ' °C',
+            );
+        });
     });
 });

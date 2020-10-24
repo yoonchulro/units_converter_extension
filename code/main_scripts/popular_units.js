@@ -16,9 +16,10 @@ const POPULAR_UNITS = {
         'chain',
     ],
     mass: ['grams', 'kilograms', 'pounds', 'ounces', 'tonnes', 'ton', 'milligrams', 'micrograms'],
-    temperature: ['celcius', 'fahrenheit', 'kelvin'],
+    temperature: ['celsius', 'fahrenheit', 'kelvin'],
     currency: ['usd', 'eur', 'gbp', 'inr', 'jpy', 'cad', 'aud', 'chf'],
     time: ['seconds', 'minutes', 'hours', 'days', 'weeks'],
+    energy: ['joules', 'british thermal units', 'calories', 'watt hours'],
 };
 
 const PRE_SYMBOLS = new Set(['$', '₹', '€', '£', '¥', 'Can$', 'C$', 'CA$', 'A$', 'AU$']);
