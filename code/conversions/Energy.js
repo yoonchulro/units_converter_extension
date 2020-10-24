@@ -75,18 +75,21 @@ class Energy {
                 case 'joules':
                     res += ',' + this.getPreciseNumber(quantity, precision) + ' J';
                     break;
-                case 'british thermal units':
+                case 'british thermal units': {
                     let conv = quantity * 1055.0559;
                     res += ',' + this.getPreciseNumber(conv, precision) + ' BTU';
                     break;
-                case 'calories':
+                }
+                case 'calories': {
                     let conv = quantity / 4.184;
                     res += ',' + this.getPreciseNumber(conv, precision) + ' cal';
                     break;
-                case 'kilowatt hours':
+                }
+                case 'watt hours': {
                     let conv = quantity * 0.0002777;
                     res += ',' + this.getPreciseNumber(conv, precision) + ' Wh';
                     break;
+                }
             }
         });
 

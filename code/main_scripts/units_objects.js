@@ -185,21 +185,21 @@ const UNITS = [
     {
         unit: 'joules',
         type: 'energy',
-        aliases: ['joules', 'j'],
+        aliases: ['joules', 'joule', 'j'],
     },
     {
         unit: 'british thermal units',
         type: 'energy',
-        aliases: ['british thermal units', 'btu'],
+        aliases: ['british thermal units', 'british thermal unit', 'btus', 'btu'],
     },
     {
         unit: 'calories',
         type: 'energy',
-        aliases: ['calories', 'cal'],
+        aliases: ['calories', 'calorie', 'cal'],
     },
     {
         unit: 'watt hours',
         type: 'energy',
-        aliases: ['watt hours', 'wh'],
+        aliases: ['watt hours', 'watt hour', 'wh'],
     },
 ];
