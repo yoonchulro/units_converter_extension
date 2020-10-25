@@ -152,4 +152,9 @@ describe('Mass', function() {
         var mass_data = massKg.getAllConversions(100, 1).substring(1);
         return expect({ mass: mass_data }).to.haveOwnProperty('mass');
     });
+
+    it('Alignment should return the proper string', function() {
+        let res = ',10 | Kgs,10 | gms,10 | lbs';
+        assert.strictEqual(massKg.dataAlignment(res), ',10 | Kgs,10 | gms,10 | lbs');
+    });
 });

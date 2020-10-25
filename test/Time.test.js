@@ -53,4 +53,14 @@ describe('Time', function() {
             assert.strictEqual(timeWeek.getStandardConversion(10), 10 * 60 * 60 * 24 * 7);
         });
     });
+
+    describe('Alignment', function() {
+        it('algnment should return the proper string', function() {
+            let res = ',10.00 | sec,0.0095 | mins,2.3901  | hours,10  | days,10   | weeks';
+            assert.strictEqual(
+                timeSec.dataAlignment(res),
+                ',10.00           | sec,0.0095            | mins,2.3901             | hours,10    | days',
+            );
+        });
+    });
 });

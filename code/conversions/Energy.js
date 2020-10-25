@@ -94,7 +94,7 @@ class Energy {
                 }
             }
         });
-        if (!alignment) {
+        if (alignment) {
             let result = this.dataAlignment(res).replace(/\s/g, '&nbsp;');
             return result;
         } else return res;
