@@ -56,7 +56,7 @@ class Length {
                 return quantity * 1000;
             case 'centimeters':
                 return quantity / 100;
-            case 'millimeter':
+            case 'millimeters':
                 return quantity / 1000;
             case 'yard':
                 return quantity / 1.094;
@@ -65,7 +65,7 @@ class Length {
             case 'inch':
                 return quantity / 39.3701;
             case 'furlong':
-                quantity * 201;
+                return quantity * 201;
             case 'chain':
                 return quantity * 20.1168;
             default:
