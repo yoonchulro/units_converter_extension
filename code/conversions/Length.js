@@ -36,7 +36,7 @@ class Length {
      * @returns precise value with precision of upto 10
      */
     getPreciseNumber(number, precision) {
-        return number.toPrecision(Math.min(Math.max(this.getPrecision(number), precision), 10));
+        return number.toFixed(Math.min(Math.max(this.getPrecision(number), precision), 4));
     }
 
     /**
@@ -86,58 +86,90 @@ class Length {
         this.arr.forEach(u => {
             switch (u.toLowerCase()) {
                 case 'meters': {
-                    res += ',' + this.getPreciseNumber(quantity, precision) + ' m';
+                    res += ',' + this.getPreciseNumber(quantity, precision) + ' | m';
                     break;
                 }
                 case 'miles': {
                     let conv = quantity / 1609;
-                    res += ',' + this.getPreciseNumber(conv, precision) + ' mi';
+                    res += ',' + this.getPreciseNumber(conv, precision) + ' | mi';
                     break;
                 }
                 case 'kilometers': {
                     let conv = quantity / 1000;
-                    res += ',' + this.getPreciseNumber(conv, precision) + ' km';
+                    res += ',' + this.getPreciseNumber(conv, precision) + ' | km';
                     break;
                 }
                 case 'centimeters': {
                     let conv = quantity * 100;
-                    res += ',' + this.getPreciseNumber(conv, precision) + ' cm';
+                    res += ',' + this.getPreciseNumber(conv, precision) + ' | cm';
                     break;
                 }
                 case 'millimeters': {
                     let conv = quantity * 1000;
-                    res += ',' + this.getPreciseNumber(conv, precision) + ' mm';
+                    res += ',' + this.getPreciseNumber(conv, precision) + ' | mm';
                     break;
                 }
                 case 'yard': {
                     let conv = quantity * 1.09361;
-                    res += ',' + this.getPreciseNumber(conv, precision) + ' yd';
+                    res += ',' + this.getPreciseNumber(conv, precision) + ' | yd';
                     break;
                 }
                 case 'feet': {
                     let conv = quantity * 3.28084;
-                    res += ',' + this.getPreciseNumber(conv, precision) + ' ft';
+                    res += ',' + this.getPreciseNumber(conv, precision) + ' | ft';
                     break;
                 }
                 case 'inch': {
                     let conv = quantity * 39.3701;
-                    res += ',' + this.getPreciseNumber(conv, precision) + ' inch';
+                    res += ',' + this.getPreciseNumber(conv, precision) + ' | inch';
                     break;
                 }
                 case 'furlong': {
                     let conv = quantity / 201;
-                    res += ',' + this.getPreciseNumber(conv, precision) + ' fur';
+                    res += ',' + this.getPreciseNumber(conv, precision) + ' | fur';
                     break;
                 }
                 case 'chain': {
                     let conv = quantity / 20.117;
-                    res += ',' + this.getPreciseNumber(conv, precision) + ' chain';
+                    res += ',' + this.getPreciseNumber(conv, precision) + ' | chain';
                     break;
                 }
             }
         });
+        let result = this.dataAlignment(res).replace(/\s/g, '&nbsp;');
 
-        return res;
+        return result;
+    }
+
+    dataAlignment(res) {
+        let str = '';
+        var converions = res.split(',');
+        converions.shift();
+        var arr = [];
+        converions.forEach(function(item) {
+            arr.push(item.split('.')[0]);
+        });
+        var max_len = Math.max.apply(
+            Math,
+            arr.map(function(el) {
+                return el.length;
+            }),
+        );
+
+        for (var i in converions) {
+            var curelt = converions[i];
+            var cur_len = curelt.split('.')[0].length;
+            if (cur_len < max_len) {
+                var data = curelt.split('|');
+                var fill = '';
+                while (cur_len < max_len) {
+                    fill += ' ';
+                    cur_len = cur_len + 1;
+                }
+                str += ',' + data[0] + fill + '|' + data[1];
+            }
+        }
+        return str;
     }
 }
 module.exports = Length;

@@ -94,7 +94,7 @@ describe('Energy', function() {
         });
         it('Watt hours should convert to joules, BTUs, and calories', function() {
             assert.strictEqual(
-                watthrs.getAllConversions(10, 2),
+                watthrs.getAllConversions(10, 2, false),
                 ',' +
                     watthrs.getPreciseNumber(10, 2) +
                     ' J' +

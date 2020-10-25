@@ -35,7 +35,7 @@ class Mass {
      * @returns precise value with precision of upto 10
      */
     getPreciseNumber(number, precision) {
-        return number.toPrecision(Math.min(Math.max(this.getPrecision(number), precision), 10));
+        return number.toFixed(Math.min(Math.max(this.getPrecision(number), precision), 2));
     }
 
     /**
@@ -82,47 +82,80 @@ class Mass {
         this.arr.forEach(u => {
             switch (u.toLowerCase()) {
                 case 'kilograms':
-                    res += ',' + this.getPreciseNumber(quantity, precision) + ' Kgs';
+                    res += ',' + this.getPreciseNumber(quantity, precision) + ' | Kgs';
                     break;
                 case 'grams': {
                     let conv = quantity * 1000;
-                    res += ',' + this.getPreciseNumber(conv, precision) + ' gms';
+                    res += ',' + this.getPreciseNumber(conv, precision) + ' | gms';
                     break;
                 }
                 case 'pounds': {
                     let conv = quantity * 2.20462262;
-                    res += ',' + this.getPreciseNumber(conv, precision) + ' lbs';
+                    res += ',' + this.getPreciseNumber(conv, precision) + ' | lbs';
                     break;
                 }
                 case 'tonnes': {
                     let conv = quantity / 1000;
-                    res += ',' + this.getPreciseNumber(conv, precision) + ' tonnes';
+                    res += ',' + this.getPreciseNumber(conv, precision) + ' | tonnes';
                     break;
                 }
                 case 'milligrams': {
                     let conv = quantity * 1000000;
-                    res += ',' + this.getPreciseNumber(conv, precision) + ' milligrams';
+                    res += ',' + this.getPreciseNumber(conv, precision) + ' | milligrams';
                     break;
                 }
                 case 'micrograms': {
                     let conv = quantity * 1000000000;
-                    res += ',' + this.getPreciseNumber(conv, precision) + ' micrograms';
+                    res += ',' + this.getPreciseNumber(conv, precision) + ' | micrograms';
                     break;
                 }
                 case 'ounces': {
                     let conv = quantity * 35.273962;
-                    res += ',' + this.getPreciseNumber(conv, precision) + ' ounces';
+                    res += ',' + this.getPreciseNumber(conv, precision) + ' | ounces';
                     break;
                 }
                 case 'ton': {
                     let conv = quantity / 907.18474;
-                    res += ',' + this.getPreciseNumber(conv, precision) + ' tons';
+                    res += ',' + this.getPreciseNumber(conv, precision) + ' | tons';
                     break;
                 }
             }
         });
-
+        // let result = this.dataAlignment(res);
         return res;
+    }
+
+    dataAlignment(res) {
+        let str = '';
+        var converions = res.split(',');
+        converions.shift();
+        var arr = [];
+        converions.forEach(function(item) {
+            arr.push(item.split('.')[0]);
+        });
+        var max_len = Math.max.apply(
+            Math,
+            arr.map(function(el) {
+                return el.length;
+            }),
+        );
+
+        for (var i in converions) {
+            var curelt = converions[i];
+            var cur_len = curelt.split('.')[0].length;
+            if (cur_len < max_len) {
+                var temp = '';
+                var data = curelt.split('|');
+                var fill = '';
+                while (cur_len < max_len) {
+                    fill += ' ';
+                    cur_len = cur_len + 1;
+                }
+                temp = ',' + data[0] + fill + '|' + data[1];
+                str += temp.replace(/\s/g, '&nbsp;');
+            }
+        }
+        return str;
     }
 }
 module.exports = Mass;
