@@ -9,7 +9,7 @@ An extension that converts your selected values into popular units. Saves time, 
 [![Build Status](https://travis-ci.com/se20z09/units_converter_extension.svg?branch=master)](https://travis-ci.com/se20z09/units_converter_extension)
 [![Coverage Status](https://coveralls.io/repos/github/se20z09/units_converter_extension/badge.svg?branch=master)](https://coveralls.io/github/se20z09/units_converter_extension?branch=master)
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/se20z09/units_converter_extension/maintainability)
-[![DOI](https://zenodo.org/badge/294249129.svg)](https://zenodo.org/badge/latestdoi/294249129)
+[![DOI](https://zenodo.org/badge/298610958.svg)](https://zenodo.org/badge/latestdoi/298610958)
 
 Click on the image below to preview the working of the extension<br/>
 [![Alt text](assets/units-upgrade.jpg)](https://www.youtube.com/watch?v=aA9o9XNz6bI)
