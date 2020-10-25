@@ -31,9 +31,9 @@ describe('Currency', function() {
     curChf = new Currency('chf', ['usd', 'eur', 'gbp', 'inr', 'jpy', 'cad', 'aud', 'hkd','php', 'czk', 'mxn', 'brl']);
     curHkd = new Currency('hkd', ['usd', 'eur', 'gbp', 'inr', 'jpy', 'cad', 'aud', 'chf','php', 'czk', 'mxn', 'brl']);
     curPhp = new Currency('php', ['usd', 'eur', 'gbp', 'inr', 'jpy', 'cad', 'aud', 'chf','hkd', 'czk', 'mxn', 'brl']);
-    curCzk = new Currency('czk', ['usd', 'eur', 'gbp', 'inr', 'jpy', 'cad', 'aud', 'chf','hkd','php', 'mxn', 'brl']);
-    curMxn = new Currency('mxn', ['usd', 'eur', 'gbp', 'inr', 'jpy', 'cad', 'aud', 'chf','hkd','php', 'czk', 'brl']);
-    curBrl = new Currency('brl', ['usd', 'eur', 'gbp', 'inr', 'jpy', 'cad', 'aud', 'chf','hkd','php', 'czk', 'mxn']);
+    curCzk = new Currency('czk', ['usd', 'eur', 'gbp', 'inr', 'jpy', 'cad', 'aud', 'chf','hkd', 'php', 'mxn', 'brl']);
+    curMxn = new Currency('mxn', ['usd', 'eur', 'gbp', 'inr', 'jpy', 'cad', 'aud', 'chf','hkd', 'php', 'czk', 'brl']);
+    curBrl = new Currency('brl', ['usd', 'eur', 'gbp', 'inr', 'jpy', 'cad', 'aud', 'chf','hkd', 'php', 'czk', 'mxn']);
 
     it('Conversions should not be empty', function() {
         assert.notStrictEqual(curUsd.getAllConversions(49.99, 1), '');
