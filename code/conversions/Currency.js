@@ -105,6 +105,29 @@ class Currency {
                     return d['USD'];
                 });
                 return rate * quantity;
+            case 'hkd':
+                rate = await this.getData('HKD').then(function(d) {
+                    return d['USD'];
+                });
+                return rate * quantity;
+            case 'php':
+                rate = await this.getData('PHP').then(function(d) {
+                    return d['USD'];
+                });
+                return rate * quantity;
+            case 'czk':
+                rate = await this.getData('CZK').then(function(d) {
+                    return d['USD'];
+                });
+                return rate * quantity;
+            case 'mxn':
+                rate = await this.getData('MXN').then(function(d) {
+                    return d['USD'];
+                });
+            case 'brl':
+                rate = await this.getData('BRL').then(function(d) {
+                    return d['USD'];
+                });
             default:
                 return null;
         }
@@ -167,6 +190,41 @@ class Currency {
                         return d['CHF'];
                     });
                     res += ',Fr    | ' + this.getPreciseNumber(factor * quantity, precision);
+                    break;
+
+                case 'hkd':
+                    factor = await this.getData('USD').then(function(d) {
+                        return d['HKD'];
+                    });
+                    res += ',HK$ ' + this.getPreciseNumber(factor * quantity, precision);
+                    break;
+
+                case 'php':
+                    factor = await this.getData('USD').then(function(d) {
+                        return d['PHP'];
+                    });
+                    res += ',₱ ' + this.getPreciseNumber(factor * quantity, precision);
+                    break;
+
+                case 'czk':
+                    factor = await this.getData('USD').then(function(d) {
+                        return d['CZK'];
+                    });
+                    res += ',Kč ' + this.getPreciseNumber(factor * quantity, precision);
+                    break;
+
+                case 'mxn':
+                    factor = await this.getData('USD').then(function(d) {
+                        return d['MXN'];
+                    });
+                    res += ',Mex$ ' + this.getPreciseNumber(factor * quantity, precision);
+                    break;
+
+                case 'brl':
+                    factor = await this.getData('USD').then(function(d) {
+                        return d['BRL'];
+                    });
+                    res += ',R$ ' + this.getPreciseNumber(factor * quantity, precision);
                     break;
             }
         }

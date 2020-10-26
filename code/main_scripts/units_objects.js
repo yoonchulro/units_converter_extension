@@ -107,6 +107,33 @@ const UNITS = [
         type: 'currency',
         aliases: ['franc', 'francs', 'CHF'],
     },
+
+    {
+        unit: 'HKD',
+        type: 'currency',
+        aliases: ['HK$'],
+    },
+    {
+        unit: 'PHP',
+        type: 'currency',
+        aliases: ['₱'],
+    },
+    {
+        unit: 'CZK',
+        type: 'currency',
+        aliases: ['Kč'],
+    },
+    {
+        unit: 'MXN',
+        type: 'currency',
+        aliases: ['Mex$'],
+    },
+    {
+        unit: 'BRL',
+        type: 'currency',
+        aliases: ['R$'],
+    },
+
     {
         unit: 'meters',
         type: 'length',
