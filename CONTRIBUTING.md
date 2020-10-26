@@ -29,6 +29,13 @@ This is a test repository, but feel free to file an issue if you still need to.
 
 ## How Can I Contribute?
 
+### Add a New Conversion
+Adding a new conversion is straightforward:
+1. Create a new conversion source file that handles the conversion, appropriately named, in [`code/conversions/`](code/conversions)
+2. Update [`main_scripts/popular_units.js`](main_scripts/popular_units.js) to add the conversion to the map
+3. Update [`main/scripts/units_objects.js`](main_scripts/units_objects.js) to add the conversion descriptions
+4. Create a unit test under [`test/`](test) with the name of the conversion and the suffix `.test.js`, ensure that your unit test sufficiently covers the main conversion code
+
 ### Reporting Bugs
 
 This section guides you through submitting a bug report for Smart Units Converter. Following these guidelines helps maintainers and the community understand your report, reproduce the behavior, and find related reports.
