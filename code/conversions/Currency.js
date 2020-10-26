@@ -56,7 +56,7 @@ class Currency {
      */
 
     getPreciseNumber(number, precision) {
-        return number.toPrecision(Math.min(Math.max(this.getPrecision(number), precision), 5));
+        return number.toFixed(Math.min(Math.max(this.getPrecision(number), precision), 2));
     }
 
     /**
