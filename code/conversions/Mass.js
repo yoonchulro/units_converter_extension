@@ -121,8 +121,8 @@ class Mass {
                 }
             }
         });
-        // let result = this.dataAlignment(res);
-        return res;
+        let result = this.dataAlignment(res);
+        return result;
     }
 
     dataAlignment(res) {
@@ -151,8 +151,7 @@ class Mass {
                     fill += ' ';
                     cur_len = cur_len + 1;
                 }
-                temp = ',' + data[0] + fill + '|' + data[1];
-                str += temp.replace(/\s/g, '&nbsp;');
+                str += ',' + data[0] + fill + '|' + data[1];
             }
         }
         return str;

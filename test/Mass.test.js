@@ -154,7 +154,10 @@ describe('Mass', function() {
     });
 
     it('Alignment should return the proper string', function() {
-        let res = ',10 | Kgs,10 | gms,10 | lbs';
-        assert.strictEqual(massKg.dataAlignment(res), ',10 | Kgs,10 | gms,10 | lbs');
+        let result =
+            ',50000.00       | gms,110.23         | lbs,1763.70        | ounces,0.05           | tonnes,0.06           | tons,50000000.00    | milligrams';
+        let input =
+            ',50000.00 | gms,110.23 | lbs,1763.70 | ounces,0.05 | tonnes,0.06 | tons,50000000.00 | milligrams,50000000000.00 | micrograms';
+        assert.strictEqual(massKg.dataAlignment(input), result);
     });
 });

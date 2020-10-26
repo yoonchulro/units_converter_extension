@@ -93,7 +93,6 @@ class Temperature {
     dataAlignment(res) {
         let str = '';
         var converions = res.split(',');
-        converions.shift();
         var arr = [];
         converions.forEach(function(item) {
             arr.push(item.split('.')[0]);
@@ -116,6 +115,8 @@ class Temperature {
                     cur_len = cur_len + 1;
                 }
                 str += ',' + data[0] + fill + '|' + data[1];
+            } else {
+                return res;
             }
         }
         return str;

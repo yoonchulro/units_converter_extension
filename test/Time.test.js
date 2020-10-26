@@ -18,11 +18,11 @@ describe('Time', function() {
     timeNull = new Time('eons', ['lots']);
 
     it('Conversions should not be empty', function() {
-        assert.notStrictEqual(timeSec.getAllConversions(100, 2), '');
-        assert.notStrictEqual(timeMin.getAllConversions(100, 2), '');
-        assert.notStrictEqual(timeHr.getAllConversions(100, 2), '');
-        assert.notStrictEqual(timeDay.getAllConversions(100, 2), '');
-        assert.notStrictEqual(timeWeek.getAllConversions(100, 2), '');
+        assert.notStrictEqual(timeSec.getAllConversions(10000, 2), '');
+        assert.notStrictEqual(timeMin.getAllConversions(10000, 2), '');
+        assert.notStrictEqual(timeHr.getAllConversions(10000, 2), '');
+        assert.notStrictEqual(timeDay.getAllConversions(10000, 2), '');
+        assert.notStrictEqual(timeWeek.getAllConversions(10000, 2), '');
     });
 
     it('Standard Conversions should not be empty', function() {
