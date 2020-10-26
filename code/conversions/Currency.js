@@ -183,7 +183,7 @@ class Currency {
                     factor = await this.getData('USD').then(function(d) {
                         return d['AUD'];
                     });
-                    res += ',AU$  | ' + this.getPreciseNumber(factor * quantity, precision);
+                    res += ',AU$ | ' + this.getPreciseNumber(factor * quantity, precision);
                     break;
                 case 'chf':
                     factor = await this.getData('USD').then(function(d) {
@@ -196,7 +196,7 @@ class Currency {
                     factor = await this.getData('USD').then(function(d) {
                         return d['HKD'];
                     });
-                    res += ',HK$  | ' + this.getPreciseNumber(factor * quantity, precision);
+                    res += ',HK$ | ' + this.getPreciseNumber(factor * quantity, precision);
                     break;
 
                 case 'php':
@@ -217,7 +217,7 @@ class Currency {
                     factor = await this.getData('USD').then(function(d) {
                         return d['MXN'];
                     });
-                    res += ',Mex$ | ' + this.getPreciseNumber(factor * quantity, precision);
+                    res += ',Mex$| ' + this.getPreciseNumber(factor * quantity, precision);
                     break;
 
                 case 'brl':
