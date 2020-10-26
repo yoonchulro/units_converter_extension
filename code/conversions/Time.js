@@ -30,7 +30,7 @@ class Time {
      * @returns precise value with precision of upto 10
      */
     getPreciseNumber(number, precision) {
-        return number.toPrecision(Math.min(Math.max(this.getPrecision(number), precision), 10));
+        return number.toFixed(Math.min(Math.max(this.getPrecision(number), precision), 2));
     }
 
     /**
@@ -69,32 +69,64 @@ class Time {
         this.arr.forEach(u => {
             switch (u.toLowerCase()) {
                 case 'seconds': {
-                    res += ',' + this.getPreciseNumber(quantity, precision) + ' sec';
+                    res += ',' + this.getPreciseNumber(quantity, precision) + ' | sec';
                     break;
                 }
                 case 'minutes': {
                     let conv = quantity / 60;
-                    res += ',' + this.getPreciseNumber(conv, precision) + ' mins';
+                    res += ',' + this.getPreciseNumber(conv, precision) + ' | mins';
                     break;
                 }
                 case 'hours': {
                     let conv = quantity / (60 * 60);
-                    res += ',' + this.getPreciseNumber(conv, precision) + ' hours';
+                    res += ',' + this.getPreciseNumber(conv, precision) + '  | hours';
                     break;
                 }
                 case 'days': {
                     let conv = quantity / (24 * 60 * 60);
-                    res += ',' + this.getPreciseNumber(conv, precision) + ' days';
+                    res += ',' + this.getPreciseNumber(conv, precision) + '  | days';
                     break;
                 }
                 case 'weeks': {
                     let conv = quantity / (7 * 24 * 60 * 60);
-                    res += ',' + this.getPreciseNumber(conv, precision) + ' weeks';
+                    res += ',' + this.getPreciseNumber(conv, precision) + '   | weeks';
                     break;
                 }
             }
         });
-        return res;
+        let result = this.dataAlignment(res).replace(/\s/g, '&nbsp;');
+        return result;
+    }
+
+    dataAlignment(res) {
+        let str = '';
+        var converions = res.split(',');
+        converions.shift();
+        var arr = [];
+        converions.forEach(function(item) {
+            arr.push(item.split('.')[0]);
+        });
+        var max_len = Math.max.apply(
+            Math,
+            arr.map(function(el) {
+                return el.length;
+            }),
+        );
+
+        for (var i in converions) {
+            var curelt = converions[i];
+            var cur_len = curelt.split('.')[0].length;
+            if (cur_len < max_len) {
+                var data = curelt.split('|');
+                var fill = '';
+                while (cur_len < max_len) {
+                    fill += ' ';
+                    cur_len = cur_len + 1;
+                }
+                str += ',' + data[0] + fill + '|' + data[1];
+            }
+        }
+        return str;
     }
 }
 module.exports = Time;

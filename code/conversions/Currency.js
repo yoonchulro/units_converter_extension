@@ -56,7 +56,7 @@ class Currency {
      */
 
     getPreciseNumber(number, precision) {
-        return number.toPrecision(Math.min(Math.max(this.getPrecision(number), precision), 10));
+        return number.toPrecision(Math.min(Math.max(this.getPrecision(number), precision), 5));
     }
 
     /**
@@ -124,53 +124,54 @@ class Currency {
         for (let i = 0; i < this.arr.length; i++) {
             switch (this.arr[i].toLowerCase()) {
                 case 'usd':
-                    res += ',$ ' + this.getPreciseNumber(quantity, precision);
+                    res += ',$     | ' + this.getPreciseNumber(quantity, precision);
                     break;
                 case 'eur':
                     factor = await this.getData('USD').then(function(d) {
                         return d['EUR'];
                     });
-                    res += ',€ ' + this.getPreciseNumber(factor * quantity, precision);
+                    res += ',€     | ' + this.getPreciseNumber(factor * quantity, precision);
                     break;
                 case 'gbp':
                     factor = await this.getData('USD').then(function(d) {
                         return d['GBP'];
                     });
-                    res += ',£ ' + this.getPreciseNumber(factor * quantity, precision);
+                    res += ',£     | ' + this.getPreciseNumber(factor * quantity, precision);
                     break;
                 case 'inr':
                     factor = await this.getData('USD').then(function(d) {
                         return d['INR'];
                     });
-                    res += ',₹ ' + this.getPreciseNumber(factor * quantity, precision);
+                    res += ',₹     | ' + this.getPreciseNumber(factor * quantity, precision);
                     break;
                 case 'jpy':
                     factor = await this.getData('USD').then(function(d) {
                         return d['JPY'];
                     });
-                    res += ',¥ ' + this.getPreciseNumber(factor * quantity, precision);
+                    res += ',¥     | ' + this.getPreciseNumber(factor * quantity, precision);
                     break;
                 case 'cad':
                     factor = await this.getData('USD').then(function(d) {
                         return d['CAD'];
                     });
-                    res += ',C$ ' + this.getPreciseNumber(factor * quantity, precision);
+                    res += ',C$   | ' + this.getPreciseNumber(factor * quantity, precision);
                     break;
                 case 'aud':
                     factor = await this.getData('USD').then(function(d) {
                         return d['AUD'];
                     });
-                    res += ',AU$ ' + this.getPreciseNumber(factor * quantity, precision);
+                    res += ',AU$| ' + this.getPreciseNumber(factor * quantity, precision);
                     break;
                 case 'chf':
                     factor = await this.getData('USD').then(function(d) {
                         return d['CHF'];
                     });
-                    res += ',Fr ' + this.getPreciseNumber(factor * quantity, precision);
+                    res += ',Fr    | ' + this.getPreciseNumber(factor * quantity, precision);
                     break;
             }
         }
-        return res;
+        var str = res.replace(/\s/g, '&nbsp;');
+        return str;
     }
 }
 

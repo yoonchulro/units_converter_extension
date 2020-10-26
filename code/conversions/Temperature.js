@@ -35,7 +35,7 @@ class Temperature {
      * @returns precise value of upto 10
      */
     getPreciseNumber(number, precision) {
-        return number.toPrecision(Math.min(Math.max(this.getPrecision(number), precision), 10));
+        return number.toFixed(Math.min(Math.max(this.getPrecision(number), precision), 2));
     }
 
     /**
@@ -72,22 +72,54 @@ class Temperature {
         this.arr.forEach(u => {
             switch (u.toLowerCase()) {
                 case 'celsius':
-                    res += ',' + this.getPreciseNumber(quantity, precision) + ' °C';
+                    res += ',' + this.getPreciseNumber(quantity, precision) + ' | °C';
                     break;
                 case 'kelvin': {
                     let conv = quantity + 273.15;
-                    res += ',' + this.getPreciseNumber(conv, precision) + ' °K';
+                    res += ',' + this.getPreciseNumber(conv, precision) + ' | °K';
                     break;
                 }
                 case 'fahrenheit': {
                     let conv = (quantity / 5) * 9 + 32;
-                    res += ',' + this.getPreciseNumber(conv, precision) + ' °F';
+                    res += ',' + this.getPreciseNumber(conv, precision) + ' | °F';
                     break;
                 }
             }
         });
+        var str = res.replace(/\s/g, '&nbsp;');
+        return str;
+    }
 
-        return res;
+    dataAlignment(res) {
+        let str = '';
+        var converions = res.split(',');
+        var arr = [];
+        converions.forEach(function(item) {
+            arr.push(item.split('.')[0]);
+        });
+        var max_len = Math.max.apply(
+            Math,
+            arr.map(function(el) {
+                return el.length;
+            }),
+        );
+
+        for (var i in converions) {
+            var curelt = converions[i];
+            var cur_len = curelt.split('.')[0].length;
+            if (cur_len < max_len) {
+                var data = curelt.split('|');
+                var fill = '';
+                while (cur_len < max_len) {
+                    fill += ' ';
+                    cur_len = cur_len + 1;
+                }
+                str += ',' + data[0] + fill + '|' + data[1];
+            } else {
+                return res;
+            }
+        }
+        return str;
     }
 }
 

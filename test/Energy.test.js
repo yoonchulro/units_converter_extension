@@ -55,13 +55,13 @@ describe('Energy', function() {
                 joules.getAllConversions(10, 2),
                 ',' +
                     joules.getPreciseNumber(10 / 1055.0559, 2) +
-                    ' BTU' +
+                    ' | BTU' +
                     ',' +
                     joules.getPreciseNumber(10 / 4.184, 2) +
-                    ' cal' +
+                    ' | cal' +
                     ',' +
                     joules.getPreciseNumber(10 * 0.0002777, 2) +
-                    ' Wh',
+                    ' | Wh',
             );
         });
         it('BTUs should convert to joules, cals, and watt hours', function() {
@@ -69,13 +69,24 @@ describe('Energy', function() {
                 btus.getAllConversions(10, 2),
                 ',' +
                     btus.getPreciseNumber(10, 2) +
-                    ' J' +
+                    ' | J' +
                     ',' +
                     btus.getPreciseNumber(10 / 4.184, 2) +
-                    ' cal' +
+                    ' | cal' +
                     ',' +
                     btus.getPreciseNumber(10 * 0.0002777, 2) +
-                    ' Wh',
+                    ' | Wh',
+            );
+        });
+        it('BTUs should convert with proper alignment', function() {
+            assert.strictEqual(
+                btus.getAllConversions(10, 2, true),
+                ',' +
+                    btus.getPreciseNumber(10 / 4.184, 2) +
+                    '&nbsp;&nbsp;|&nbsp;cal' +
+                    ',' +
+                    btus.getPreciseNumber(10 * 0.0002777, 2) +
+                    '&nbsp;&nbsp;|&nbsp;Wh',
             );
         });
         it('Calories should convert to joules, BTUs, and watt hours', function() {
@@ -83,28 +94,35 @@ describe('Energy', function() {
                 cals.getAllConversions(10, 2),
                 ',' +
                     cals.getPreciseNumber(10, 2) +
-                    ' J' +
+                    ' | J' +
                     ',' +
                     cals.getPreciseNumber(10 / 1055.0559, 2) +
-                    ' BTU' +
+                    ' | BTU' +
                     ',' +
                     cals.getPreciseNumber(10 * 0.0002777, 2) +
-                    ' Wh',
+                    ' | Wh',
             );
         });
         it('Watt hours should convert to joules, BTUs, and calories', function() {
             assert.strictEqual(
-                watthrs.getAllConversions(10, 2),
+                watthrs.getAllConversions(10, 2, false),
                 ',' +
                     watthrs.getPreciseNumber(10, 2) +
-                    ' J' +
+                    ' | J' +
                     ',' +
                     watthrs.getPreciseNumber(10 / 1055.0559, 2) +
-                    ' BTU' +
+                    ' | BTU' +
                     ',' +
                     watthrs.getPreciseNumber(10 / 4.184, 2) +
-                    ' cal',
+                    ' | cal',
             );
+        });
+    });
+
+    describe('Alignment', function() {
+        it('alignment should return the proper string', function() {
+            let res = ',10.00 | J,0.0095 | BTU,2.3901 | cal';
+            assert.strictEqual(watthrs.dataAlignment(res), ',0.0095  | BTU,2.3901  | cal');
         });
     });
 });

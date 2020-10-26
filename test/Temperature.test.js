@@ -47,10 +47,10 @@ describe('Temperature', function() {
                 tempF.getAllConversions(90, 2),
                 ',' +
                     tempF.getPreciseNumber(90, 2) +
-                    ' °C' +
+                    '&nbsp;|&nbsp;°C' +
                     ',' +
                     tempF.getPreciseNumber(90 + 273.15, 2) +
-                    ' °K',
+                    '&nbsp;|&nbsp;°K',
             );
         });
         it('Celsius should convert to fahrenheit and kelvin', function() {
@@ -58,10 +58,10 @@ describe('Temperature', function() {
                 tempC.getAllConversions(25, 2),
                 ',' +
                     tempC.getPreciseNumber((25 / 5) * 9 + 32, 2) +
-                    ' °F' +
+                    '&nbsp;|&nbsp;°F' +
                     ',' +
                     tempC.getPreciseNumber(25 + 273.15, 2) +
-                    ' °K',
+                    '&nbsp;|&nbsp;°K',
             );
         });
         it('Kelvin should convert to fahrenheit and celsius', function() {
@@ -69,11 +69,18 @@ describe('Temperature', function() {
                 tempK.getAllConversions(300, 2),
                 ',' +
                     tempK.getPreciseNumber((300 / 5) * 9 + 32, 2) +
-                    ' °F' +
+                    '&nbsp;|&nbsp;°F' +
                     ',' +
                     tempK.getPreciseNumber(300, 2) +
-                    ' °C',
+                    '&nbsp;|&nbsp;°C',
             );
+        });
+    });
+
+    describe('Alignment', function() {
+        it('alignment should return the proper string', function() {
+            let res = ',10 | °C,10 | °F,10 | °K';
+            assert.strictEqual(tempK.dataAlignment(res), ',10 | °C,10 | °F,10 | °K');
         });
     });
 });

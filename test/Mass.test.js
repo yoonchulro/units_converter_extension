@@ -152,4 +152,12 @@ describe('Mass', function() {
         var mass_data = massKg.getAllConversions(100, 1).substring(1);
         return expect({ mass: mass_data }).to.haveOwnProperty('mass');
     });
+
+    it('Alignment should return the proper string', function() {
+        let result =
+            ',50000.00       | gms,110.23         | lbs,1763.70        | ounces,0.05           | tonnes,0.06           | tons,50000000.00    | milligrams';
+        let input =
+            ',50000.00 | gms,110.23 | lbs,1763.70 | ounces,0.05 | tonnes,0.06 | tons,50000000.00 | milligrams,50000000000.00 | micrograms';
+        assert.strictEqual(massKg.dataAlignment(input), result);
+    });
 });

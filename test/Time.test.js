@@ -18,11 +18,11 @@ describe('Time', function() {
     timeNull = new Time('eons', ['lots']);
 
     it('Conversions should not be empty', function() {
-        assert.notStrictEqual(timeSec.getAllConversions(100, 2), '');
-        assert.notStrictEqual(timeMin.getAllConversions(100, 2), '');
-        assert.notStrictEqual(timeHr.getAllConversions(100, 2), '');
-        assert.notStrictEqual(timeDay.getAllConversions(100, 2), '');
-        assert.notStrictEqual(timeWeek.getAllConversions(100, 2), '');
+        assert.notStrictEqual(timeSec.getAllConversions(10000, 2), '');
+        assert.notStrictEqual(timeMin.getAllConversions(10000, 2), '');
+        assert.notStrictEqual(timeHr.getAllConversions(10000, 2), '');
+        assert.notStrictEqual(timeDay.getAllConversions(10000, 2), '');
+        assert.notStrictEqual(timeWeek.getAllConversions(10000, 2), '');
     });
 
     it('Standard Conversions should not be empty', function() {
@@ -51,6 +51,16 @@ describe('Time', function() {
         });
         it('Weeks should return seconds', function() {
             assert.strictEqual(timeWeek.getStandardConversion(10), 10 * 60 * 60 * 24 * 7);
+        });
+    });
+
+    describe('Alignment', function() {
+        it('algnment should return the proper string', function() {
+            let res = ',10.00 | sec,0.0095 | mins,2.3901  | hours,10  | days,10   | weeks';
+            assert.strictEqual(
+                timeSec.dataAlignment(res),
+                ',10.00           | sec,0.0095            | mins,2.3901             | hours,10    | days',
+            );
         });
     });
 });
