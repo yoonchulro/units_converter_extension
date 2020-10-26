@@ -15,6 +15,8 @@ An extension that converts your selected values into popular units. Saves time, 
 Click on the image below to preview the working of the extension<br/>
 [![Alt text](assets/units-upgrade.jpg)](https://www.youtube.com/watch?v=_amr9F9gXX8)
 
+### Be sure to check out our [Project 3 Materials](p3_materials/) for your experiment!
+
 ## Installation
 
 -   Clone the repository using `git clone https://github.com/se20z09/units_converter_extension`
@@ -66,6 +68,7 @@ Source documentation can be found at: [Units Converter Extension Docs](https://s
 
 ### Other Automated Tools
 -   [Husky Git Hooks](https://www.npmjs.com/package/husky)
+-   [CodeClimate](https://codeclimate.com/github/se20z09/units_converter_extension/maintainability)
 
 ### Installation
 -   All dependencies and static analysis tools can be automatically installed by running `npm install` in the root of the cloned repo after installing Node.js
