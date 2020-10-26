@@ -116,15 +116,15 @@ While the prerequisites above must be satisfied prior to having your pull reques
 
 
 ## Code Style Checker and Analyzer
-### Standard Js 
+### eslint 
 <b>Installation</b>
-- `npm install standard --global` in comand line interface to install globally
-- `npm install standard --save-dev` in command line interface to install locally 
+- `npm install eslint --global` in comand line interface to install globally
+- `npm install eslint --save-dev` in command line interface to install locally 
 
- <b>Running Standard Js</b> 
- - go to root of project and type `standard` if StandardJs is installed globally
- - go to root of project and type `npx standard` if StandardJs is installed locally 
- - Instead of installing it using npm, you can also use the extension available on VS Code 
+ <b>Running eslint</b> 
+ - Once installed, eslint will automatically check your syntax as you type
+ - Syntax violations will be flagged with red underlines and proposed fixes will be available on hover
+ - Our config file automatically integrates eslint with Prettier to avoid conflicts
  
  ## Documentation
  ### JSDoc
