@@ -105,6 +105,29 @@ class Currency {
                     return d['USD'];
                 });
                 return rate * quantity;
+            case 'hkd':
+                rate = await this.getData('HKD').then(function(d) {
+                    return d['USD'];
+                });
+                return rate * quantity;
+            case 'php':
+                rate = await this.getData('PHP').then(function(d) {
+                    return d['USD'];
+                });
+                return rate * quantity;
+            case 'czk':
+                rate = await this.getData('CZK').then(function(d) {
+                    return d['USD'];
+                });
+                return rate * quantity;
+            case 'mxn':
+                rate = await this.getData('MXN').then(function(d) {
+                    return d['USD'];
+                });
+            case 'brl':
+                rate = await this.getData('BRL').then(function(d) {
+                    return d['USD'];
+                });
             default:
                 return null;
         }
@@ -124,49 +147,84 @@ class Currency {
         for (let i = 0; i < this.arr.length; i++) {
             switch (this.arr[i].toLowerCase()) {
                 case 'usd':
-                    res += ',$     | ' + this.getPreciseNumber(quantity, precision);
+                    res += ',$      | ' + this.getPreciseNumber(quantity, precision);
                     break;
                 case 'eur':
                     factor = await this.getData('USD').then(function(d) {
                         return d['EUR'];
                     });
-                    res += ',€     | ' + this.getPreciseNumber(factor * quantity, precision);
+                    res += ',€      | ' + this.getPreciseNumber(factor * quantity, precision);
                     break;
                 case 'gbp':
                     factor = await this.getData('USD').then(function(d) {
                         return d['GBP'];
                     });
-                    res += ',£     | ' + this.getPreciseNumber(factor * quantity, precision);
+                    res += ',£      | ' + this.getPreciseNumber(factor * quantity, precision);
                     break;
                 case 'inr':
                     factor = await this.getData('USD').then(function(d) {
                         return d['INR'];
                     });
-                    res += ',₹     | ' + this.getPreciseNumber(factor * quantity, precision);
+                    res += ',₹      | ' + this.getPreciseNumber(factor * quantity, precision);
                     break;
                 case 'jpy':
                     factor = await this.getData('USD').then(function(d) {
                         return d['JPY'];
                     });
-                    res += ',¥     | ' + this.getPreciseNumber(factor * quantity, precision);
+                    res += ',¥      | ' + this.getPreciseNumber(factor * quantity, precision);
                     break;
                 case 'cad':
                     factor = await this.getData('USD').then(function(d) {
                         return d['CAD'];
                     });
-                    res += ',C$   | ' + this.getPreciseNumber(factor * quantity, precision);
+                    res += ',C$    | ' + this.getPreciseNumber(factor * quantity, precision);
                     break;
                 case 'aud':
                     factor = await this.getData('USD').then(function(d) {
                         return d['AUD'];
                     });
-                    res += ',AU$| ' + this.getPreciseNumber(factor * quantity, precision);
+                    res += ',AU$ | ' + this.getPreciseNumber(factor * quantity, precision);
                     break;
                 case 'chf':
                     factor = await this.getData('USD').then(function(d) {
                         return d['CHF'];
                     });
-                    res += ',Fr    | ' + this.getPreciseNumber(factor * quantity, precision);
+                    res += ',Fr     | ' + this.getPreciseNumber(factor * quantity, precision);
+                    break;
+
+                case 'hkd':
+                    factor = await this.getData('USD').then(function(d) {
+                        return d['HKD'];
+                    });
+                    res += ',HK$ | ' + this.getPreciseNumber(factor * quantity, precision);
+                    break;
+
+                case 'php':
+                    factor = await this.getData('USD').then(function(d) {
+                        return d['PHP'];
+                    });
+                    res += ',₱      | ' + this.getPreciseNumber(factor * quantity, precision);
+                    break;
+
+                case 'czk':
+                    factor = await this.getData('USD').then(function(d) {
+                        return d['CZK'];
+                    });
+                    res += ',Kč     | ' + this.getPreciseNumber(factor * quantity, precision);
+                    break;
+
+                case 'mxn':
+                    factor = await this.getData('USD').then(function(d) {
+                        return d['MXN'];
+                    });
+                    res += ',Mex$| ' + this.getPreciseNumber(factor * quantity, precision);
+                    break;
+
+                case 'brl':
+                    factor = await this.getData('USD').then(function(d) {
+                        return d['BRL'];
+                    });
+                    res += ',R$     | ' + this.getPreciseNumber(factor * quantity, precision);
                     break;
             }
         }
