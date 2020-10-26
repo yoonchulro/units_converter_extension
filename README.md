@@ -18,15 +18,15 @@ Click on the image below to preview the working of the extension<br/>
 ## Installation
 
 -   Clone the repository using `git clone https://github.com/se20z09/units_converter_extension`
--   In the chrome browser open `chrome://extensions/`
--   Enable developer settings if it is not enabled
--   Choose Load Unpacked
+-   In Google Chrome browser open `chrome://extensions/`
+-   Enable `Developer Settings` if it is not enabled
+-   Choose `Load Unpacked`
 -   Select the repository folder that was cloned in the first step
     ![image](https://github.com/se20z09/units_converter_extension/blob/master/assets/Images/load%20unpacked.PNG)
--   The extension will now be added to the Chrome
+-   The extension will now be enabled in Google Chrome
     ![image](https://github.com/se20z09/units_converter_extension/blob/master/assets/Images/Uploaded.PNG)
--   Screenshot of working of the extension
-    ![image](https://github.com/se20z09/units_converter_extension/blob/master/assets/Images/Example.PNG)
+-   Screenshot of the extension in action:
+    ![image](https://github.com/se20z09/units_converter_extension/blob/master/assets/Images/v2currency.PNG)
 
 ## Languages
 
@@ -49,14 +49,9 @@ Source documentation can be found at: [Units Converter Extension Docs](https://s
 
 -   [Visual Studio Code](https://code.visualstudio.com/) IDE
 -   [Prettier Formatter for Visual Studio Code](https://github.com/prettier/prettier-vscode/blob/main/README.md)
+-   [Upstatement Prettier Config](https://www.npmjs.com/package/@upstatement/prettier-config)
 
 *   Prettier is an opinionated code formatter. It enforces a consistent style by parsing your code and re-printing it with its own rules that take the maximum line length into account, wrapping code when necessary.
-
-#### Installation
-
--   Install through VS Code extensions. Search for Prettier - Code formatter
--   It can also be installed in VS Code: Launch VS Code Quick Open (Ctrl+P), paste the following command, and press enter.
-    `ext install esbenp.prettier-vscode`
 
 ### Code Coverage
 
@@ -64,3 +59,13 @@ Source documentation can be found at: [Units Converter Extension Docs](https://s
 -   [Coveralls](https://coveralls.io/) - Continuous integration coverage
 -   Code coverage is automatically output on every pull request via Coveralls bot and on every local test via the `npm test` script.
 -   <b>Installation:</b> all necessary modules are installed by running `npm install` from the root directory of the repository.
+
+### Syntax Checker
+-   [eslint](https://eslint.org/docs/user-guide/getting-started)
+-   [Upstatement eslint Config](https://www.npmjs.com/package/@upstatement/eslint-config)
+
+### Other Automated Tools
+-   [Husky Git Hooks](https://www.npmjs.com/package/husky)
+
+### Installation
+-   All dependencies and static analysis tools can be automatically installed by running `npm install` in the root of the cloned repo after installing Node.js
