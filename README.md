@@ -25,7 +25,7 @@ Click on the image below to preview the working of the extension<br/>
     ![image](https://github.com/se20z09/units_converter_extension/blob/master/assets/Images/load%20unpacked.PNG)
 -   The extension will now be enabled in Google Chrome
     ![image](https://github.com/se20z09/units_converter_extension/blob/master/assets/Images/Uploaded.PNG)
--   Screenshot of the extension in action:
+-   Screenshot of the extension in action:<br>
     ![image](assets/Images/v2currency.png)
 
 ## Languages
