@@ -9,9 +9,8 @@ The following is a set of guidelines for contributing to Smart Units Converter, 
 [Code of Conduct](#code-of-conduct)
 
 [How Can I Contribute?](#how-can-i-contribute)
+  * [Add a New Conversion](#add-a-new-conversion)
   * [Reporting Bugs](#reporting-bugs)
-  * [Suggesting Enhancements](#suggesting-enhancements)
-  * [Your First Code Contribution](#your-first-code-contribution)
   * [Pull Requests](#pull-requests)
 
 [Styleguides](#styleguides)
