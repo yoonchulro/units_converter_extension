@@ -72,9 +72,6 @@ class Datarate {
      * @returns precise up to 10 converted value
      */
     getAllConversions(quantity, precision) {
-        console.log(quantity);
-        console.log(this.unit);
-        console.log(this.arr);
         let res = '';
         this.arr.forEach(u => {
             switch (u.toLowerCase()) {
@@ -135,6 +132,8 @@ class Datarate {
                     cur_len = cur_len + 1;
                 }
                 str += ',' + data[0] + fill + '|' + data[1];
+            } else {
+                str += ',' + curelt;
             }
         }
         return str;
