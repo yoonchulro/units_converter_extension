@@ -34,6 +34,7 @@ const POPULAR_UNITS = {
     ],
     time: ['seconds', 'minutes', 'hours', 'days', 'weeks'],
     energy: ['joules', 'british thermal units', 'calories', 'watt hours'],
+    datarate: ['bps', 'kbps', 'mbps', 'gbps', 'tbps'],
 };
 
 const PRE_SYMBOLS = new Set([
