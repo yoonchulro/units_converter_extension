@@ -50,7 +50,7 @@ class Datarate {
          * We use a switch case to make appropriate conversion
          */
         switch (this.unit.toLowerCase()) {
-            case 'bbps':
+            case 'bps':
                 return quantity;
             case 'kbps':
                 return quantity * 1000;
@@ -71,9 +71,11 @@ class Datarate {
      * @param {Number} precision up to this number precision
      * @returns precise up to 10 converted value
      */
-    getAllConversions(quantity, precision, alignment) {
+    getAllConversions(quantity, precision) {
+        console.log(quantity);
+        console.log(this.unit);
+        console.log(this.arr);
         let res = '';
-        let max_len = quantity.toString().split('.')[0].length;
         this.arr.forEach(u => {
             switch (u.toLowerCase()) {
                 case 'bps':
@@ -101,10 +103,10 @@ class Datarate {
                 }
             }
         });
-        if (alignment) {
-            let result = this.dataAlignment(res).replace(/\s/g, '&nbsp;');
-            return result;
-        } else return res;
+        console.log(res);
+        let result = this.dataAlignment(res).replace(/\s/g, '&nbsp;');
+        console.log(result);
+        return result;
     }
 
     dataAlignment(res) {
@@ -138,5 +140,4 @@ class Datarate {
         return str;
     }
 }
-
-module.exports = Datarates;
+module.exports = Datarate;
