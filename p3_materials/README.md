@@ -1,11 +1,27 @@
 # Materials for Project 3
 
 ## Rationale
+Welcome and thank you for considering our work for Project 3!<br>
+Reasons to use this project:
+- <b>Easy to install!</b> Simply clone the repo and get up and running in Chrome with 3 clicks.
+- <b>Easy to quantify!</b> A simple math test will show how much time this extension saves over using a calculator or search engine.
+- <b>Easy to use!</b> Just highlight a value and unit with your cursor and the app does the rest.
+
+This means you can get your testers online and providing meaningful data within 2 minutes, saving valuable testing time.
 
 ## Materials Provided
-* Google Assessment Form to evaluate particpants and obtain experimental data on the project.
+-   Sample experimental protocol
+-   Proposed metrics
+-   Premade Google Forms math test - auto-graded, auto-shuffled, and ready to use!
+
+![Sample Assessment](assets/Images/assessment.png)
 
 ## Proposed Metrics
+-   Time to finish test
+-   Number of questions completed
+-   Avg. time per question
+-   Ratio of correct answers
+-   Preferred tool - Smart Units app or other?
 
 ### Testing Protocol
 1. Create the assessment. 
