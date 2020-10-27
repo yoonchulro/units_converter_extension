@@ -59,7 +59,7 @@ describe('Time', function() {
             let res = ',10.00 | sec,0.0095 | mins,2.3901  | hours,10  | days,10   | weeks';
             assert.strictEqual(
                 timeSec.dataAlignment(res),
-                ',10.00           | sec,0.0095            | mins,2.3901             | hours,10    | days',
+                ',10.00           | sec,0.0095            | mins,2.3901             | hours,10    | days,10   | weeks',
             );
         });
     });
