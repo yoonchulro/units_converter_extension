@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>JSDoc: Source: conversions/Temperature.js</title>
+        <title>JSDoc: Source: conversions/Datarate.js</title>
 
         <script src="scripts/prettify/prettify.js"></script>
         <script src="scripts/prettify/lang-css.js"></script>
@@ -15,19 +15,19 @@
 
     <body>
         <div id="main">
-            <h1 class="page-title">Source: conversions/Temperature.js</h1>
+            <h1 class="page-title">Source: conversions/Datarate.js</h1>
 
             <section>
                 <article>
                     <pre class="prettyprint source linenums"><code>/**
- * Our temperature class handles all temperature related conversions
+ * Datarates class handles all data rate-related conversions
  */
 
-class Temperature {
+class Datarate {
     /**
-     *
-     * @param {Object} unit Temperature Unit
-     * @param {Array} arr Stores the different conversion rate
+     * Creates a new Datarate object
+     * @param {Object} unit Datarate Unit
+     * @param {Array} arr Stores the different conversion rates
      */
     constructor(unit, arr) {
         this.unit = unit;
@@ -51,69 +51,86 @@ class Temperature {
 
     /**
      * Function to get a maximum precision of 10
-     * @param {number} number currency value
+     * @param {number} number energy value
      * @param {number} precision precision value
      * @returns precise value of upto 10
      */
     getPreciseNumber(number, precision) {
-        return number.toFixed(Math.min(Math.max(this.getPrecision(number), precision), 2));
+        // return number.toPrecision(Math.min(Math.max(this.getPrecision(number), precision), 5));
+        return number.toFixed(Math.min(Math.max(this.getPrecision(number), precision), 4));
     }
 
     /**
-     *Our standard conversion is celsius, so we try to convert all selection to celsius
-     * @property {Function} getStandardConversion all units converted to celsius
+     *Our standard conversion is bits per second (bps), so we try to convert all selection to bps
+     * @property {Function} getStandardConversion all units converted to bps
      * @param {Object} quantity user query unit
-     * @returns Value in celsius
+     * @returns Value in bps
      */
     getStandardConversion(quantity) {
         /**
          * We use a switch case to make appropriate conversion
          */
         switch (this.unit.toLowerCase()) {
-            case 'celsius':
+            case 'bps':
                 return quantity;
-            case 'kelvin':
-                return quantity - 273.15;
-            case 'fahrenheit':
-                return ((quantity - 32) / 9) * 5;
+            case 'kbps':
+                return quantity * 1000;
+            case 'mbps':
+                return quantity * 1000000;
+            case 'gbps':
+                return quantity * 1000000000;
+            case 'tbps':
+                return quantity * 1000000000000;
             default:
                 return null;
         }
     }
 
     /**
-     *From our standard conversion we try to convert into all the other units specified in arr property of this class
-    with a precision no more than 10
+     * From our standard conversion we try to convert into all the other units specified in arr property of this class with a precision no more than 10
      * @param {Object} quantity value to convert
-     * @param {number} precision upto this number precision
-     * @returns precise upto 10 converted value 
+     * @param {Number} precision up to this number precision
+     * @returns precise up to 10 converted value
      */
     getAllConversions(quantity, precision) {
         let res = '';
         this.arr.forEach(u => {
             switch (u.toLowerCase()) {
-                case 'celsius':
-                    res += ',' + this.getPreciseNumber(quantity, precision) + ' | °C';
+                case 'bps':
+                    res += ',' + this.getPreciseNumber(quantity, precision) + ' | bps';
                     break;
-                case 'kelvin': {
-                    let conv = quantity + 273.15;
-                    res += ',' + this.getPreciseNumber(conv, precision) + ' | °K';
+                case 'kbps': {
+                    let conv = quantity / 1000;
+                    res += ',' + this.getPreciseNumber(conv, precision) + ' | kbps';
                     break;
                 }
-                case 'fahrenheit': {
-                    let conv = (quantity / 5) * 9 + 32;
-                    res += ',' + this.getPreciseNumber(conv, precision) + ' | °F';
+                case 'mbps': {
+                    let conv = quantity / 1000000;
+                    res += ',' + this.getPreciseNumber(conv, precision) + ' | mbps';
+                    break;
+                }
+                case 'gbps': {
+                    let conv = quantity / 1000000000;
+                    res += ',' + this.getPreciseNumber(conv, precision) + ' | gbps';
+                    break;
+                }
+                case 'tbps': {
+                    let conv = quantity / 1000000000000;
+                    res += ',' + this.getPreciseNumber(conv, precision) + ' | tbps';
                     break;
                 }
             }
         });
-        var str = res.replace(/\s/g, '&amp;nbsp;');
-        return str;
+        console.log(res);
+        let result = this.dataAlignment(res).replace(/\s/g, '&amp;nbsp;');
+        console.log(result);
+        return result;
     }
 
     dataAlignment(res) {
         let str = '';
         var converions = res.split(',');
+        converions.shift();
         var arr = [];
         converions.forEach(function(item) {
             arr.push(item.split('.')[0]);
@@ -137,14 +154,13 @@ class Temperature {
                 }
                 str += ',' + data[0] + fill + '|' + data[1];
             } else {
-                return res;
+                str += ',' + curelt;
             }
         }
         return str;
     }
 }
-
-module.exports = Temperature;
+module.exports = Datarate;
 </code></pre>
                 </article>
             </section>

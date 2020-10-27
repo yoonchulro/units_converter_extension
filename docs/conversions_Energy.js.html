@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>JSDoc: Source: conversions/Temperature.js</title>
+        <title>JSDoc: Source: conversions/Energy.js</title>
 
         <script src="scripts/prettify/prettify.js"></script>
         <script src="scripts/prettify/lang-css.js"></script>
@@ -15,19 +15,19 @@
 
     <body>
         <div id="main">
-            <h1 class="page-title">Source: conversions/Temperature.js</h1>
+            <h1 class="page-title">Source: conversions/Energy.js</h1>
 
             <section>
                 <article>
                     <pre class="prettyprint source linenums"><code>/**
- * Our temperature class handles all temperature related conversions
+ * Energy class handles all energy-related conversions
  */
 
-class Temperature {
+class Energy {
     /**
-     *
-     * @param {Object} unit Temperature Unit
-     * @param {Array} arr Stores the different conversion rate
+     * Creates a new Energy object
+     * @param {Object} unit Energy Unit
+     * @param {Array} arr Stores the different conversion rates
      */
     constructor(unit, arr) {
         this.unit = unit;
@@ -51,69 +51,80 @@ class Temperature {
 
     /**
      * Function to get a maximum precision of 10
-     * @param {number} number currency value
+     * @param {number} number energy value
      * @param {number} precision precision value
      * @returns precise value of upto 10
      */
     getPreciseNumber(number, precision) {
-        return number.toFixed(Math.min(Math.max(this.getPrecision(number), precision), 2));
+        // return number.toPrecision(Math.min(Math.max(this.getPrecision(number), precision), 5));
+        return number.toFixed(Math.min(Math.max(this.getPrecision(number), precision), 4));
     }
 
     /**
-     *Our standard conversion is celsius, so we try to convert all selection to celsius
-     * @property {Function} getStandardConversion all units converted to celsius
+     *Our standard conversion is joules, so we try to convert all selection to celsius
+     * @property {Function} getStandardConversion all units converted to joules
      * @param {Object} quantity user query unit
-     * @returns Value in celsius
+     * @returns Value in joules
      */
     getStandardConversion(quantity) {
         /**
          * We use a switch case to make appropriate conversion
          */
         switch (this.unit.toLowerCase()) {
-            case 'celsius':
+            case 'joules':
                 return quantity;
-            case 'kelvin':
-                return quantity - 273.15;
-            case 'fahrenheit':
-                return ((quantity - 32) / 9) * 5;
+            case 'british thermal units':
+                return quantity * 1055.0559;
+            case 'calories':
+                return quantity * 4.184;
+            case 'watt hours':
+                return quantity / 0.0002777;
             default:
                 return null;
         }
     }
 
     /**
-     *From our standard conversion we try to convert into all the other units specified in arr property of this class
-    with a precision no more than 10
+     * From our standard conversion we try to convert into all the other units specified in arr property of this class with a precision no more than 10
      * @param {Object} quantity value to convert
-     * @param {number} precision upto this number precision
-     * @returns precise upto 10 converted value 
+     * @param {Number} precision up to this number precision
+     * @returns precise up to 10 converted value
      */
-    getAllConversions(quantity, precision) {
+    getAllConversions(quantity, precision, alignment) {
         let res = '';
+        let max_len = quantity.toString().split('.')[0].length;
         this.arr.forEach(u => {
             switch (u.toLowerCase()) {
-                case 'celsius':
-                    res += ',' + this.getPreciseNumber(quantity, precision) + ' | °C';
+                case 'joules':
+                    res += ',' + this.getPreciseNumber(quantity, precision) + ' | J';
                     break;
-                case 'kelvin': {
-                    let conv = quantity + 273.15;
-                    res += ',' + this.getPreciseNumber(conv, precision) + ' | °K';
+                case 'british thermal units': {
+                    let conv = quantity / 1055.0559;
+                    res += ',' + this.getPreciseNumber(conv, precision) + ' | BTU';
                     break;
                 }
-                case 'fahrenheit': {
-                    let conv = (quantity / 5) * 9 + 32;
-                    res += ',' + this.getPreciseNumber(conv, precision) + ' | °F';
+                case 'calories': {
+                    let conv = quantity / 4.184;
+                    res += ',' + this.getPreciseNumber(conv, precision) + ' | cal';
+                    break;
+                }
+                case 'watt hours': {
+                    let conv = quantity * 0.0002777;
+                    res += ',' + this.getPreciseNumber(conv, precision) + ' | Wh';
                     break;
                 }
             }
         });
-        var str = res.replace(/\s/g, '&amp;nbsp;');
-        return str;
+        if (alignment) {
+            let result = this.dataAlignment(res).replace(/\s/g, '&amp;nbsp;');
+            return result;
+        } else return res;
     }
 
     dataAlignment(res) {
         let str = '';
         var converions = res.split(',');
+        converions.shift();
         var arr = [];
         converions.forEach(function(item) {
             arr.push(item.split('.')[0]);
@@ -136,15 +147,13 @@ class Temperature {
                     cur_len = cur_len + 1;
                 }
                 str += ',' + data[0] + fill + '|' + data[1];
-            } else {
-                return res;
             }
         }
         return str;
     }
 }
 
-module.exports = Temperature;
+module.exports = Energy;
 </code></pre>
                 </article>
             </section>

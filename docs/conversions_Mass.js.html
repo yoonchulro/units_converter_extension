@@ -56,7 +56,7 @@ class Mass {
      * @returns precise value with precision of upto 10
      */
     getPreciseNumber(number, precision) {
-        return number.toPrecision(Math.min(Math.max(this.getPrecision(number), precision), 10));
+        return number.toFixed(Math.min(Math.max(this.getPrecision(number), precision), 2));
     }
 
     /**
@@ -73,9 +73,9 @@ class Mass {
                 return quantity;
             case 'grams':
                 return quantity / 1000;
-            case 'pound':
+            case 'pounds':
                 return quantity / 2.20462262;
-            case 'tonne':
+            case 'tonnes':
                 return quantity * 1000;
             case 'milligrams':
                 return quantity / 1000000;
@@ -103,47 +103,79 @@ class Mass {
         this.arr.forEach(u => {
             switch (u.toLowerCase()) {
                 case 'kilograms':
-                    res += ',' + this.getPreciseNumber(quantity, precision) + ' Kgs';
+                    res += ',' + this.getPreciseNumber(quantity, precision) + ' | Kgs';
                     break;
                 case 'grams': {
                     let conv = quantity * 1000;
-                    res += ',' + this.getPreciseNumber(conv, precision) + ' gms';
+                    res += ',' + this.getPreciseNumber(conv, precision) + ' | gms';
                     break;
                 }
-                case 'pound': {
+                case 'pounds': {
                     let conv = quantity * 2.20462262;
-                    res += ',' + this.getPreciseNumber(conv, precision) + ' lbs';
+                    res += ',' + this.getPreciseNumber(conv, precision) + ' | lbs';
                     break;
                 }
-                case 'tonne': {
+                case 'tonnes': {
                     let conv = quantity / 1000;
-                    res += ',' + this.getPreciseNumber(conv, precision) + ' tonnes';
+                    res += ',' + this.getPreciseNumber(conv, precision) + ' | tonnes';
                     break;
                 }
                 case 'milligrams': {
                     let conv = quantity * 1000000;
-                    res += ',' + this.getPreciseNumber(conv, precision) + ' milligrams';
+                    res += ',' + this.getPreciseNumber(conv, precision) + ' | milligrams';
                     break;
                 }
                 case 'micrograms': {
                     let conv = quantity * 1000000000;
-                    res += ',' + this.getPreciseNumber(conv, precision) + ' micrograms';
+                    res += ',' + this.getPreciseNumber(conv, precision) + ' | micrograms';
                     break;
                 }
                 case 'ounces': {
                     let conv = quantity * 35.273962;
-                    res += ',' + this.getPreciseNumber(conv, precision) + ' ounces';
+                    res += ',' + this.getPreciseNumber(conv, precision) + ' | ounces';
                     break;
                 }
-                case 'ounces': {
+                case 'ton': {
                     let conv = quantity / 907.18474;
-                    res += ',' + this.getPreciseNumber(conv, precision) + ' tonss';
+                    res += ',' + this.getPreciseNumber(conv, precision) + ' | tons';
                     break;
                 }
             }
         });
+        let result = this.dataAlignment(res);
+        return result;
+    }
 
-        return res;
+    dataAlignment(res) {
+        let str = '';
+        var converions = res.split(',');
+        converions.shift();
+        var arr = [];
+        converions.forEach(function(item) {
+            arr.push(item.split('.')[0]);
+        });
+        var max_len = Math.max.apply(
+            Math,
+            arr.map(function(el) {
+                return el.length;
+            }),
+        );
+
+        for (var i in converions) {
+            var curelt = converions[i];
+            var cur_len = curelt.split('.')[0].length;
+            if (cur_len &lt; max_len) {
+                var temp = '';
+                var data = curelt.split('|');
+                var fill = '';
+                while (cur_len &lt; max_len) {
+                    fill += ' ';
+                    cur_len = cur_len + 1;
+                }
+                str += ',' + data[0] + fill + '|' + data[1];
+            }
+        }
+        return str;
     }
 }
 module.exports = Mass;
@@ -157,6 +189,8 @@ module.exports = Mass;
             <h3>Classes</h3>
             <ul>
                 <li><a href="Currency.html">Currency</a></li>
+                <li><a href="Datarate.html">Datarate</a></li>
+                <li><a href="Energy.html">Energy</a></li>
                 <li><a href="Length.html">Length</a></li>
                 <li><a href="Mass.html">Mass</a></li>
                 <li><a href="Temperature.html">Temperature</a></li>
@@ -183,7 +217,7 @@ module.exports = Mass;
 
         <footer>
             Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on
-            Thu Oct 22 2020 16:31:56 GMT-0400 (Eastern Daylight Time)
+            Mon Oct 26 2020 22:35:31 GMT-0400 (Eastern Daylight Time)
         </footer>
 
         <script>

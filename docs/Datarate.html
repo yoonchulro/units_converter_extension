@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>JSDoc: Class: Time</title>
+        <title>JSDoc: Class: Datarate</title>
 
         <script src="scripts/prettify/prettify.js"></script>
         <script src="scripts/prettify/lang-css.js"></script>
@@ -15,19 +15,18 @@
 
     <body>
         <div id="main">
-            <h1 class="page-title">Class: Time</h1>
+            <h1 class="page-title">Class: Datarate</h1>
 
             <section>
                 <header>
                     <h2>
-                        <span class="attribs"><span class="type-signature"></span></span>Time<span
-                            class="signature"
-                            >(unit, arr)</span
+                        <span class="attribs"><span class="type-signature"></span></span
+                        >Datarate<span class="signature">(unit, arr)</span
                         ><span class="type-signature"></span>
                     </h2>
 
                     <div class="class-description">
-                        <p>Our time class handles all temperature related conversions</p>
+                        <p>Datarates class handles all data rate-related conversions</p>
                     </div>
                 </header>
 
@@ -35,11 +34,15 @@
                     <div class="container-overview">
                         <h2>Constructor</h2>
 
-                        <h4 class="name" id="Time">
-                            <span class="type-signature"></span>new Time<span class="signature"
+                        <h4 class="name" id="Datarate">
+                            <span class="type-signature"></span>new Datarate<span class="signature"
                                 >(unit, arr)</span
                             ><span class="type-signature"></span>
                         </h4>
+
+                        <div class="description">
+                            <p>Creates a new Datarate object</p>
+                        </div>
 
                         <h5>Parameters:</h5>
 
@@ -62,7 +65,7 @@
                                         <span class="param-type">Object</span>
                                     </td>
 
-                                    <td class="description last"><p>Time unit</p></td>
+                                    <td class="description last"><p>Datarate Unit</p></td>
                                 </tr>
 
                                 <tr>
@@ -73,7 +76,7 @@
                                     </td>
 
                                     <td class="description last">
-                                        <p>Array of all conversions</p>
+                                        <p>Stores the different conversion rates</p>
                                     </td>
                                 </tr>
                             </tbody>
@@ -84,8 +87,9 @@
                             <dd class="tag-source">
                                 <ul class="dummy">
                                     <li>
-                                        <a href="conversions_Time.js.html">conversions/Time.js</a>,
-                                        <a href="conversions_Time.js.html#line5">line 5</a>
+                                        <a href="conversions_Datarate.js.html"
+                                            >conversions/Datarate.js</a
+                                        >, <a href="conversions_Datarate.js.html#line5">line 5</a>
                                     </li>
                                 </ul>
                             </dd>
@@ -135,10 +139,10 @@
                                 <td class="name"><code>precision</code></td>
 
                                 <td class="type">
-                                    <span class="param-type">number</span>
+                                    <span class="param-type">Number</span>
                                 </td>
 
-                                <td class="description last"><p>upto this number precision</p></td>
+                                <td class="description last"><p>up to this number precision</p></td>
                             </tr>
                         </tbody>
                     </table>
@@ -148,8 +152,9 @@
                         <dd class="tag-source">
                             <ul class="dummy">
                                 <li>
-                                    <a href="conversions_Time.js.html">conversions/Time.js</a>,
-                                    <a href="conversions_Time.js.html#line67">line 67</a>
+                                    <a href="conversions_Datarate.js.html"
+                                        >conversions/Datarate.js</a
+                                    >, <a href="conversions_Datarate.js.html#line74">line 74</a>
                                 </li>
                             </ul>
                         </dd>
@@ -158,7 +163,7 @@
                     <h5>Returns:</h5>
 
                     <div class="param-desc">
-                        <p>precise value with precsion of upto 10</p>
+                        <p>precise up to 10 converted value</p>
                     </div>
 
                     <h4 class="name" id="getPreciseNumber">
@@ -168,7 +173,7 @@
                     </h4>
 
                     <div class="description">
-                        <p>Return number with a max precison of 10</p>
+                        <p>Function to get a maximum precision of 10</p>
                     </div>
 
                     <h5>Parameters:</h5>
@@ -192,7 +197,7 @@
                                     <span class="param-type">number</span>
                                 </td>
 
-                                <td class="description last"><p>value to convert</p></td>
+                                <td class="description last"><p>energy value</p></td>
                             </tr>
 
                             <tr>
@@ -202,7 +207,7 @@
                                     <span class="param-type">number</span>
                                 </td>
 
-                                <td class="description last"><p>upto number precision</p></td>
+                                <td class="description last"><p>precision value</p></td>
                             </tr>
                         </tbody>
                     </table>
@@ -212,8 +217,9 @@
                         <dd class="tag-source">
                             <ul class="dummy">
                                 <li>
-                                    <a href="conversions_Time.js.html">conversions/Time.js</a>,
-                                    <a href="conversions_Time.js.html#line32">line 32</a>
+                                    <a href="conversions_Datarate.js.html"
+                                        >conversions/Datarate.js</a
+                                    >, <a href="conversions_Datarate.js.html#line37">line 37</a>
                                 </li>
                             </ul>
                         </dd>
@@ -222,7 +228,88 @@
                     <h5>Returns:</h5>
 
                     <div class="param-desc">
-                        <p>precise value with precision of upto 10</p>
+                        <p>precise value of upto 10</p>
+                    </div>
+
+                    <h4 class="name" id="getPrecision">
+                        <span class="type-signature"></span>getPrecision<span class="signature"
+                            >(number)</span
+                        ><span class="type-signature"></span>
+                    </h4>
+
+                    <div class="description">
+                        <p>Function to get a number's precision</p>
+                    </div>
+
+                    <h5>Parameters:</h5>
+
+                    <table class="params">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+
+                                <th>Type</th>
+
+                                <th class="last">Description</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="name"><code>number</code></td>
+
+                                <td class="type">
+                                    <span class="param-type">number</span>
+                                </td>
+
+                                <td class="description last"><p>currency value</p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h5 class="subsection-title">Properties:</h5>
+
+                    <table class="props">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+
+                                <th>Type</th>
+
+                                <th class="last">Description</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="name"><code>getPrecision</code></td>
+
+                                <td class="type">
+                                    <span class="param-type">function</span>
+                                </td>
+
+                                <td class="description last"><p>function for precision</p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <dl class="details">
+                        <dt class="tag-source">Source:</dt>
+                        <dd class="tag-source">
+                            <ul class="dummy">
+                                <li>
+                                    <a href="conversions_Datarate.js.html"
+                                        >conversions/Datarate.js</a
+                                    >, <a href="conversions_Datarate.js.html#line22">line 22</a>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+
+                    <h5>Returns:</h5>
+
+                    <div class="param-desc">
+                        <p>precise rate</p>
                     </div>
 
                     <h4 class="name" id="getStandardConversion">
@@ -234,8 +321,8 @@
 
                     <div class="description">
                         <p>
-                            Our standard conversion is seconds, so we try to convert all selection
-                            to seconds
+                            Our standard conversion is bits per second (bps), so we try to convert
+                            all selection to bps
                         </p>
                     </div>
 
@@ -286,9 +373,7 @@
                                     <span class="param-type">function</span>
                                 </td>
 
-                                <td class="description last">
-                                    <p>Units converted into Seconds</p>
-                                </td>
+                                <td class="description last"><p>all units converted to bps</p></td>
                             </tr>
                         </tbody>
                     </table>
@@ -298,8 +383,9 @@
                         <dd class="tag-source">
                             <ul class="dummy">
                                 <li>
-                                    <a href="conversions_Time.js.html">conversions/Time.js</a>,
-                                    <a href="conversions_Time.js.html#line42">line 42</a>
+                                    <a href="conversions_Datarate.js.html"
+                                        >conversions/Datarate.js</a
+                                    >, <a href="conversions_Datarate.js.html#line48">line 48</a>
                                 </li>
                             </ul>
                         </dd>
@@ -308,7 +394,7 @@
                     <h5>Returns:</h5>
 
                     <div class="param-desc">
-                        <p>Value in Seconds</p>
+                        <p>Value in bps</p>
                     </div>
                 </article>
             </section>
