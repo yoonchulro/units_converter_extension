@@ -26,7 +26,8 @@
                 "code/conversions/Currency.js",
                 "code/conversions/Length.js",
                 "code/conversions/Time.js",
-                "code/conversions/Energy.js"
+                "code/conversions/Energy.js",
+                "code/conversions/Datarate.js"
             ]
         }
     ],

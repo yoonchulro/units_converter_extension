@@ -229,4 +229,29 @@ const UNITS = [
         type: 'energy',
         aliases: ['watt hours', 'watt hour', 'wh'],
     },
+    {
+        unit: 'bps',
+        type: 'datarate',
+        aliases: ['bits per second', 'Bps', 'BPS'],
+    },
+    {
+        unit: 'kbps',
+        type: 'datarate',
+        aliases: ['kilobits per second', 'Kbps', 'KBPS'],
+    },
+    {
+        unit: 'mbps',
+        type: 'datarate',
+        aliases: ['megabits per second', 'Mbps', 'MBPS'],
+    },
+    {
+        unit: 'gbps',
+        type: 'datarate',
+        aliases: ['gigabits per second', 'Gbps', 'GBPS'],
+    },
+    {
+        unit: 'tbps',
+        type: 'datarate',
+        aliases: ['terabits per second', 'Tbps', 'TBPS'],
+    },
 ];

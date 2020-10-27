@@ -52,6 +52,8 @@ function get_conversion_class(type, unit) {
         return new Mass(unit, get_possible_conversions_list(type, unit));
     } else if (type == 'energy') {
         return new Energy(unit, get_possible_conversions_list(type, unit));
+    } else if (type == 'datarate') {
+        return new Datarate(unit, get_possible_conversions_list(type, unit));
     }
 }
 
