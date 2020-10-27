@@ -124,6 +124,8 @@ class Time {
                     cur_len = cur_len + 1;
                 }
                 str += ',' + data[0] + fill + '|' + data[1];
+            } else {
+                str += ',' + curelt;
             }
         }
         return str;
