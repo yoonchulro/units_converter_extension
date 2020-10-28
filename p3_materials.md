@@ -9,9 +9,12 @@ Reasons to use this project:
 
 This means you can get your testers online and providing meaningful data within 2 minutes, saving valuable testing time.
 
+#### The Test: Does the Smart Units converter app save time and improve accuracy of conversions vs other tools like Google?
+
 ## Materials Provided
 -   Sample experimental protocol
 -   Proposed metrics
+-   Developer support - got questions? We've got answers!
 -   Premade Google Forms math test - auto-graded, auto-shuffled, and ready to use!
 
 ![Sample Assessment](assets/Images/assessment.png)
@@ -21,23 +24,17 @@ This means you can get your testers online and providing meaningful data within 
 -   Number of questions completed
 -   Avg. time per question
 -   Ratio of correct answers
+-   Tools used other than Smart Units
 -   Preferred tool - Smart Units app or other?
 
-### Testing Protocol
-1. Create the assessment. 
- * Google Forms provide a convience means to create quizzes and also captures responses so that the team can perform analytics on the response. 
- * In order to maintain anonymity, participants can be issued a token or id, which they can enter into the form.
-2. Create the answer key.
- * While creating the questionaire on google forms, you will be provided an option to provide the answer for each question. On providing the answer key, the responses will be automatically evaluated.
-3. Send out the quiz
- * The quiz must be made available to the participants.
- * There are multiple options 
-    - Share the link or email the link to the participants.
-    - Post the link on your website, or github repository.
-    - Use a shortened version of the url - Tiny URL, Tiny CC.
-4. Feedback
- * Provide participants the opportunity to give feedback, inorder to improve the progress.
- *  Identify the pros and cons of the experimental setup and the software in general.
-5. Results and Analytics
- * If the answer keys are provided, the responses are automatically evaluated.
- * From the data obtained perform exploratory data analysis to draw inference from the experiment.
+## Proposed Testing Protocol
+1. To maximize data, we suggest having each tester spend time on two paradigms: <b>it</b>, aka this extension, and <b>not it</b>, aka any other tools.
+2. Using our premade math test or another similar evaluation of your creation, have each tester answer as many conversions as possible with each tool set.
+3. Begin a timer at the start of each segment, stopping the tester after 25 minutes have elapsed or the test has been completed, whichever occurs first.
+4. During tester sessions note the time required to complete each version of the test and what tools are used in the "not it" paradigm.
+5. Two segments of 25 minutes leaves 10 minutes remaining for tester instructions, setup, and any optional qualitative assessment you wish to give.
+
+-   Notes:
+    -   Upon transfer of this project, we will duplicate the Google Forms resources and send them to your team to own.
+    -   As Currency conversions use live exchange rates, this feature cannot have auto-graded questions.
+    -   As stated above, the math test is auto-shuffled to improve data validity.
