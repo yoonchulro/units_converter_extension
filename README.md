@@ -15,7 +15,7 @@ An extension that converts your selected values into popular units. Saves time, 
 Click on the image below to preview the working of the extension<br/>
 [![Alt text](assets/units-upgrade.jpg)](https://www.youtube.com/watch?v=_amr9F9gXX8)
 
-### Be sure to check out our [Project 3 Materials](p3_materials/) for your experiment!
+### Be sure to check out our [Project 3 Materials](p3_materials.md) for your experiment!
 
 ## Installation
 
