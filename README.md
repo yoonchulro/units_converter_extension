@@ -72,3 +72,7 @@ Source documentation can be found at: [Units Converter Extension Docs](https://s
 
 ### Installation
 -   All dependencies and static analysis tools can be automatically installed by running `npm install` in the root of the cloned repo after installing Node.js
+
+### Google form link:
+- [Without extension](https://docs.google.com/forms/d/1FV503w3lSfCZHpExhzIOJQ1yIctYXHp2BwmVHgEJL5c/)
+- [With Extension](https://docs.google.com/forms/d/e/1FAIpQLSeOHdNwQqSHT-z4lDYyVEh9CGSUrO2CyxBZQY2mYFdemzMzWA/viewform?usp=sf_link)
