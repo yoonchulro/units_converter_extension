@@ -6,7 +6,7 @@
 4. Ease of setup and use.
 5. Total time taken for setup and usage.
 
-#### Data Colelction BTS: Behind The Scenes
+#### Data Collection BTS: Behind The Scenes
 1. Time taken to convert some random units without extension.
 2. Time to convert the same random units now with extension.
 
