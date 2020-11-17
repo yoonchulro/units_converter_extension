@@ -17,7 +17,14 @@ The experiment was conducted with the help of:
 3. Google Sheet: Observations from our side with respect to each participant.
 
 ## Observations
-<to be written>
+Total seven persons participated for the experiment. The following points were the highlights of observations:
+1. Overall, the participants felt that it was very easy to install the extension and very fast to do conversions.
+2. Most of the participants used google search and in built calculator applications to do without extension conversions.
+3. The major feedback from the participants was that they could not able to copy paste the conversions suggested from tooltip. 
+
+The following table compares the time taken by participants with and without using extension for conducting conversions:
+
+![Observation Table](https://github.com/pranav2595/units_converter_extension/blob/master/observation_table.PNG)
 
 
 
