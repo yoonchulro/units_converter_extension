@@ -6,7 +6,7 @@
 4. Ease of setup and use.
 5. Total time taken for setup and usage.
 
-#### Data Colelction BTS: Behind The Scenes
+#### Data Collection BTS: Behind The Scenes
 1. Time taken to convert some random units without extension.
 2. Time to convert the same random units now with extension.
 
@@ -26,6 +26,7 @@ The experiment was conducted with the help of:
 2. The maximum time taken in the experiments was on the installation of the software.
 3. The use of the extension drastically reduced the conversion time of the units for the users.
 4. The extension was very helpful as per the testers and was very intuitive to use.
+5. Users do not have to go through of creating a new tab and searching on google when using this extension. They simply just have to highlight the numbers with units. 
 
 
 
