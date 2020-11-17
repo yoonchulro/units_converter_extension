@@ -22,7 +22,11 @@ The experiment was conducted with the help of:
 
 
 ## Conclusion
-<to be written>
+1. The project still has a scope for further development as we can see the feedbacks from various testers about the copy-paste functionality, unit conversion preferences, weather site compatibility, clickability etc.
+2. The maximum time taken in the experiments was on the installation of the software.
+3. The use of the extension drastically reduced the conversion time of the units for the users.
+4. The extension was very helpful as per the testers and was very intuitive to use.
+
 
 
 ## Threats to Validity
