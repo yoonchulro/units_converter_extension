@@ -46,5 +46,10 @@ The following were observed to be change points for the next testing and validat
 5. Testing steps:
 
    Writing what the participants are actually intended to do during the test might or might not be beneficial. If the test participant knows what to expect and has already been trying out the tool so as to become "familiar" with it, then do the time data collected during the testing experiment convey the actual ease-of-access time or just practise time - that is a debate point which can be taken into account the next time such experiments are conducted with other participants. In any case, writing an universally understandable project map will help participants know what to expect even if not the actual steps during the experiment itself.
+
+
+6. Lesser participants as testers:
+
+    The tests conducted was used over a confined audience which belonged to a particular class. Moreover the test was conducted in a very small scale. The test was somewhat biased for a particular group of audience. So the results have this threat to validity in this aspect.
   
 In general, writing cleaner code, helper files and a pin-pointed README will help in the future experiments.
