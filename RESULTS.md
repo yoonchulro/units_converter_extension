@@ -35,12 +35,16 @@ The following were observed to be change points for the next testing and validat
    
    Testers might have found varying degrees of difficulty to try and debug the code since the bugs introduced were not uniform, similar or of the same quality. Hence, as testers progressed through the debugging session, they might have felt varying levels of difficulty in a very small amount of time affecting the level of code they wrote.
 
-3. Helper files or functions:
+3. Closed v open environment:
     
-    To people new to a certain language chosen, we could have added a helper file to run and get their concepts in shape before asking them to dive right into debugging a code written in a fairly unintuitive language for many testers. This is another point to keep in mind for our further testing iterations.
+    To assertain whether the subjects were actually able to familiarise themselves with the tools, they were also asked if there are able to use it outside the google sheet responses and the internet being an deep, dangerous ocean, it is not always the case where participants are able to find the *correct* website for their taste. Eg: some weather sites do not allow selecting the temperature. Thus, we have to consider whether factoring that open-world time-to-use into our findings makes the analysis generic for the tool or is it just a characteristic of the participant.
 
 4. Cleaner install and easier process:
 
-    Writing the entire, correct procedure in a concise manner in the github README.md would definitely might have helped with the experiment. 
+    Writing the entire, correct procedure in a concise manner in the github README.md would definitely help with the experiment. 
+
+5. Testing steps:
+
+   Writing what the participants are actually intended to do during the test might or might not be beneficial. If the test participant knows what to expect and has already been trying out the tool so as to become "familiar" with it, then do the time data collected during the testing experiment convey the actual ease-of-access time or just practise time - that is a debate point which can be taken into account the next time such experiments are conducted with other participants. In any case, writing an universally understandable project map will help participants know what to expect even if not the actual steps during the experiment itself.
   
 In general, writing cleaner code, helper files and a pin-pointed README will help in the future experiments.
